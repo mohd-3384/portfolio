@@ -1,0 +1,269 @@
+// header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 96px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   z-index: 1000;
+
+//   background: linear-gradient(to bottom,
+//       rgba(0, 0, 0, 1) 0%,
+//       rgba(0, 0, 0, 1) 60%,
+//       rgba(255, 99, 71, 0.1) 100%);
+// }
+
+// header .logo {
+//   font-size: 2rem;
+//   font-family: 'Press Start 2P', monospace;
+// }
+
+// .myHead {
+//   display: flex;
+//   align-items: center;
+//   gap: 56px;
+//   justify-content: space-between;
+//   padding-right: 32px;
+//   padding-left: 32px;
+// }
+
+// nav {
+//   display: flex;
+//   align-items: center;
+//   gap: 48px;
+// }
+
+// nav a,
+// .buttons a {
+//   margin: 0 1rem;
+//   color: var(--redColor);
+//   text-decoration: none;
+//   transition: color 0.1s ease;
+//   font-size: 22px;
+//   font-weight: 500;
+
+//   &:hover {
+//     color: var(--greenColor);
+//   }
+// }
+
+// .buttons a {
+//   margin: 0;
+//   font-size: 18px;
+//   font-weight: 700;
+// }
+
+// .burger-menu {
+//   display: none;
+//   width: 32px;
+//   height: 32px;
+//   cursor: pointer;
+// }
+
+// @media screen and (max-width: 1200px) {
+//   .myHead {
+//     gap: 26px;
+//   }
+
+//   nav {
+//     gap: 0;
+//   }
+// }
+
+// @media screen and (max-width: 999px) {
+
+//   nav,
+//   .buttons {
+//     display: none;
+//   }
+
+//   .burger-menu {
+//     display: block;
+//   }
+// }
+
+/* ====== Header layout ====== */
+header.navbar {
+  position: fixed;
+  inset: 0 auto auto 0;
+  height: 96px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(255, 99, 71, 0.1) 100%);
+}
+
+.myHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  padding-inline: 32px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Desktop visible */
+.desktop-nav,
+.desktop-buttons {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.desktop-nav a,
+.desktop-buttons a {
+  color: var(--redColor);
+  text-decoration: none;
+  transition: color .1s;
+  font-size: 22px;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--greenColor);
+  }
+}
+
+.desktop-buttons a {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ====== Burger (CSS-Icon) ====== */
+.burger {
+  display: none;
+  /* only mobil visible */
+  width: 32px;
+  height: 28px;
+  position: relative;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--redColor);
+    transition: transform .25s ease, opacity .2s ease;
+
+    &:nth-child(1) {
+      top: 4px;
+    }
+
+    &:nth-child(2) {
+      top: 13px;
+    }
+
+    &:nth-child(3) {
+      top: 22px;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 999;
+
+  /* Body-Gradient */
+  background: linear-gradient(165deg,
+      var(--bg-black) 10%,
+      var(--bg-red) 40%,
+      var(--bg-black) 80%,
+      var(--bg-green) 100%);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-nav {
+  height: 100%;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  a {
+    color: var(--redColor);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: color .1s;
+
+    &:hover {
+      color: var(--greenColor);
+    }
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* Close „X“ */
+.mobile-menu .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--redColor);
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* ====== Breakpoints ====== */
+@media (max-width: 999px) {
+
+  .desktop-nav,
+  .desktop-buttons {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .myHead {
+    gap: 26px;
+  }
+}

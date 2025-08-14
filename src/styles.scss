@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-black: rgba(0, 0, 0);
+  --bg-red: rgba(20, 0, 0);
+  --bg-grey: rgba(25, 25, 25);
+  --bg-green: rgba(0, 16, 0);
+  --redColor: #E15544;
+  --greenColor: #009639;
+  --transition125: 0.125s;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #E15544;
+  background: linear-gradient(165deg,
+      var(--bg-black) 10%,
+      var(--bg-red) 40%,
+      var(--bg-green) 60%,
+      var(--bg-black) 80%,
+      var(--bg-grey) 100%);
+  height: 8000px
+}
+
+main {
+  margin-top: 100px;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,49 @@
+// :root {
+//   --bg-start: rgba(11, 4, 45);
+//   /* oben */
+//   --bg-end: #110a6b;
+//   /* Mitte */
+// }
+
+// body {
+//   color: #ff6347 !important;
+//   /* orange-rot wie im Screenshot */
+//   background: linear-gradient(165deg,
+//       var(--bg-start) 10%,
+//       var(--bg-end) 50%,
+//       var(--bg-start) 70%,
+//       var(--bg-end) 100%) !important;
+// }
+
+
+
+// .btn {
+//   padding: 0.5rem 1rem;
+//   border: 1px solid #009639;
+//   border-radius: 8px;
+//   text-decoration: none;
+//   font-weight: bold;
+//   transition: 0.3s;
+// }
+
+// .btn.github {
+//   border-color: #009639;
+//   color: #ff6347;
+//   background: transparent;
+// }
+
+// .btn.github:hover {
+//   background: #009639;
+// }
+
+// .btn.live {
+//   background: #009639;
+//   color: black;
+// }
+
+main {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+}

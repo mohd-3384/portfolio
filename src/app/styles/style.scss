@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/roboto-mono/roboto-mono-v30-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/roboto-mono/roboto-mono-v30-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/roboto-mono/roboto-mono-v30-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/roboto-mono/roboto-mono-v30-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/press-start-2p/press-start-2p-v15-latin-regular.woff2') format('woff2');
+}
+
+
+/* scrollbar */
+/* Firefox */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #E15544 !important;
+  }
+}
+
+/* Chrome */
+*::-webkit-scrollbar {
+  width: 12px !important;
+  height: 8px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #009639 !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #E15544 !important;
+  // border-radius: 4px !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #E15544 !important;
+  cursor: n-resize;
+}
+
+*::-webkit-scrollbar-button {
+  display: none !important;
+}
