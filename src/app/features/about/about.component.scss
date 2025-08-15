@@ -1,90 +1,38 @@
-.about {
-  padding-block: 120px;
-}
-
-/* ===== Hero (oben) ===== */
-.about__hero {
-  display: grid;
-  /* Links flexibel, rechts fix begrenzt */
-  grid-template-columns: minmax(0, 1fr) clamp(260px, 30vw, 400px);
-  align-items: end;
-  gap: 40px;
-
-  @media (max-width: 992px) {
-    grid-template-columns: 1fr;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-.about__role {
-  letter-spacing: .06em;
-  font-weight: 700;
-  font-size: clamp(20px, 3.2vw, 54px);
-  margin: 0 0 12px 0;
-  color: var(--greenColor);
-}
-
-.about__name {
-  margin: 0;
-  line-height: .95;
-  color: var(--greenColor);
-  display: inline-block;
-  font-weight: 700;
-  font-size: clamp(36px, 8vw, 74px);
-}
-
-/* Bildspalte: max 400px, skaliert sauber mit */
-.about__hero-image {
-  justify-self: end;
-  /* Bild an die rechte Kante */
-  width: 100%;
-  max-width: 400px;
-  /* harte Obergrenze */
-
-  @media (max-width: 992px) {
-    justify-self: center;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-}
-
-/* ===== Why me (darunter) ===== */
 .about__why {
   margin-top: 80px;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  /* links Bild, rechts Text */
   gap: 40px;
   align-items: start;
 
   @media (max-width: 992px) {
+    margin-top: 0;
     grid-template-columns: 1fr;
     text-align: center;
   }
 }
 
-.about__why-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
+.about__why-image {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
 }
 
-/* >>> Right alignment für rechten Block */
 .about__why-text {
   justify-self: end;
-  /* Block an die rechte Seite drücken */
   text-align: right;
-  /* Inhalte rechtsbündig */
   max-width: 560px;
-  /* Option: Lesebreite limitieren */
+
+  p {
+    color: var(--greenColor);
+  }
 
   @media (max-width: 992px) {
     justify-self: center;
@@ -105,97 +53,93 @@
   color: var(--greenColor);
 }
 
-/* Icons-Zeile: rechtsbündig */
 .about__facts {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: end;
+  justify-content: space-around;
   gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0 0 28px 0;
 
   .iam {
-    font-size: clamp(28px, 3.4vw, 40px);
+    font-size: clamp(40px, 3.4vw, 40px);
     font-weight: 800;
     color: var(--redColor);
-    margin-inline-end: 12px;
   }
 
   .fact-item {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+
+    span {
+      font-weight: 600;
+      color: var(--greenColor);
+    }
+
+    &.remote {
+      margin-top: 24px;
+    }
   }
 
-  .fact-item img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .fact-item span {
-    font-weight: 600;
-    color: var(--greenColor);
-  }
-
-  .fact-item.remote {
-    margin-top: 36px;
-  }
-
-  /* Pfeile kleiner + hinter den Text legen */
   .arrow {
     position: absolute;
     pointer-events: none;
     user-select: none;
     z-index: 0;
-    /* hinter die Facts */
-    opacity: .95;
+    opacity: 0.95;
   }
 
-  /* Pfeil unter "located in Wuppertal" -> zum Remote-Item */
   .arrow-to-remote {
     width: clamp(16px, 2.6vw, 30px);
-    /* ↓ kleiner */
-    right: 40%;
-    /* Position feinjustieren */
-    top: 44%;
+    right: 50%;
+    top: 36%;
     transform: translateY(-8%) rotate(-8deg);
   }
 
-  /* Pfeil vom Remote-Item -> Button */
   .arrow-to-button {
     width: clamp(18px, 2.6vw, 30px);
-    /* ↓ kleiner */
-    right: 12%;
-    top: 106%;
+    right: 40%;
+    top: 96%;
     transform: rotate(10deg);
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 8px;
+    margin-top: 56px;
 
-    .arrow-to-remote {
-      right: 56%;
-      top: 58%;
-      transform: translate(40%, -10%) rotate(-6deg);
+    .arrow {
+      display: none !important;
     }
 
-    .arrow-to-button {
-      right: 18%;
-      top: 72%;
-      transform: rotate(8deg);
+    .remote {
+      margin-top: 0 !important;
     }
   }
 }
 
 .talk {
-  margin-top: 44px !important;
-  margin-right: 56px !important;
+  margin-top: 26px !important;
+  margin-right: 180px !important;
+  transition: 0.3s !important;
+
+  @media (max-width: 992px) {
+    margin-top: 36px !important;
+    margin-right: -80px !important;
+  }
+
+  @media (max-width: 992px) {
+    margin: 0 !important;
+  }
 }
 
-/* ===== Buttons (nutzt deine Farben/Variablen) ===== */
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -203,6 +147,10 @@
   text-decoration: none;
   font-weight: 700;
   transition: background var(--transition125), color var(--transition125), border var(--transition125);
+
+  &.border-none {
+    border: none !important;
+  }
 }
 
 .btn-primary {
@@ -226,7 +174,39 @@
   }
 }
 
-/* border entfernen */
-.btn.border-none {
-  border: none !important;
+.remote-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+}
+
+.remote-img {
+  margin-bottom: 12px !important;
+  width: 60px !important;
+
+  &:hover {
+    content: url('/assets/images/remote3.png');
+    scale: 1.1;
+  }
+}
+
+.locate-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px !important;
+  transition: 1s ease;
+}
+
+.locate-img {
+  width: 28px !important;
+  height: 32px !important;
+  transition: content 0.3s ease;
+
+  &:hover {
+    content: url('/assets/images/locate_.png');
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
