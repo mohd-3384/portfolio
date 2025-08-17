@@ -10,7 +10,6 @@ import { ProjectCardComponent } from "./project-card/project-card.component";
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  // demo data – replace with your real projects
   projects: ProjectItem[] = [
     {
       title: 'Portfolio Website',

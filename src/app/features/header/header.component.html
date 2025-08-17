@@ -2,14 +2,16 @@
   <div class="container myHead">
     <div class="flex justify-between gap-5">
       <!-- Logo -->
-      <div class="logo pointer">&lt;MA&gt;</div>
+      <a class="logo pointer" routerLink="/">
+        &lt;MA&gt;
+      </a>
 
       <!-- Desktop-Navigation -->
       <nav class="desktop-nav">
-        <a href="#">Why me</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a (click)="scrollTo('about')">Why me</a>
+        <a (click)="scrollTo('skills')">Skills</a>
+        <a (click)="scrollTo('projects')">Projects</a>
+        <a (click)="scrollTo('contact')">Contact</a>
       </nav>
     </div>
 
@@ -33,10 +35,10 @@
     </button>
 
     <nav class="mobile-nav" (click)="$event.stopPropagation()">
-      <a href="#" (click)="isMenuOpen=false">Why me</a>
-      <a href="#" (click)="isMenuOpen=false">Skills</a>
-      <a href="#" (click)="isMenuOpen=false">Projects</a>
-      <a href="#" (click)="isMenuOpen=false">Contact</a>
+      <a (click)="goToSection('about')">Why me</a>
+      <a (click)="goToSection('skills')">Skills</a>
+      <a (click)="goToSection('projects')">Projects</a>
+      <a (click)="goToSection('contact')">Contact</a>
 
       <div class="lang">
         <a class="github" href="#" (click)="isMenuOpen=false">DE</a>

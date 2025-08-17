@@ -1,128 +1,3 @@
-// :host {
-//   display: block;
-//   width: 100%;
-// }
-
-// .project-card {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-areas:
-//     "image  content"
-//     "image  links";
-//   column-gap: 56px;
-//   row-gap: 24px;
-//   align-items: center;
-//   margin-bottom: 96px;
-
-//   &__image {
-//     grid-area: image;
-//     border-radius: 12px;
-//     box-shadow: 0 0 24px var(--greenColor);
-//   }
-
-//   &__content {
-//     grid-area: content;
-//     align-self: start;
-//     color: var(--greenColor);
-//   }
-
-//   &__title {
-//     // font-size: 48px;
-//     font-size: clamp(24px, 4vw, 48px);
-//     font-weight: bold;
-//   }
-
-//   &__tech {
-//     // font-size: 18px;
-//     font-size: clamp(12px, 4vw, 18px);
-//   }
-
-//   &__links {
-//     grid-area: links;
-//     display: flex;
-//     gap: 16px;
-//     align-self: start;
-
-//     a {
-//       font-size: 18px;
-//     }
-//   }
-
-//   &__image img {
-//     display: block;
-//     width: 100%;
-//     height: auto;
-//     border-radius: 12px;
-//   }
-// }
-
-// .project-card.project-card--flip {
-//   grid-template-areas:
-//     "content image"
-//     "links   image";
-// }
-
-// /* ---------------------------------------
-//    Tablet/Mobile: Text → Bild → Buttons
-//    --------------------------------------- */
-// @media (max-width: 992px) {
-
-//   .project-card,
-//   .project-card.project-card--flip {
-//     grid-template-columns: 1fr;
-//     grid-template-areas:
-//       "content"
-//       "image"
-//       "links";
-//     row-gap: 20px;
-//     margin-bottom: 72px;
-//   }
-
-//   .project-card__content {
-//     text-align: center;
-//     align-items: center;
-//   }
-
-//   .project-card__links {
-//     justify-content: center;
-//     gap: 20px;
-//   }
-// }
-
-// .btn {
-//   display: inline-block;
-//   padding: 10px 18px;
-//   border-radius: 6px;
-//   border: none;
-//   text-decoration: none;
-//   font-weight: 700;
-//   transition: all var(--transition250) ease;
-// }
-
-// .btn-primary {
-//   background: var(--greenColor);
-//   color: #000;
-
-//   &:hover {
-//     background: var(--redColor);
-//     color: #fff;
-//   }
-// }
-
-// .btn-outline {
-//   border: 1.5px solid var(--greenColor);
-//   color: var(--greenColor);
-//   background: transparent;
-
-//   &:hover {
-//     border-color: var(--redColor);
-//     color: var(--redColor);
-//   }
-// }
-
-
-
-
 :host {
   display: block;
   width: 100%;
@@ -130,12 +5,9 @@
 
 /* ===== Card ===== */
 .project-card {
-  /* Das Duo (Bild + Text) bekommt eine Maxbreite und steht mittig */
   max-width: 1200px;
   margin: 0 auto clamp(64px, 8vw, 96px);
-
   display: grid;
-  /* Zwei inhaltsspalten, die nicht zu breit werden und zusammen zentriert sind */
   grid-template-columns: minmax(420px, 560px) minmax(420px, 640px);
   grid-template-areas:
     "image content"
@@ -144,19 +16,18 @@
   row-gap: 24px;
   align-items: center;
   justify-content: center;
-  /* -> Spaltenpaket wird zentriert */
 
   &__image {
     grid-area: image;
     border-radius: 12px;
     box-shadow: 0 0 24px var(--greenColor);
-    overflow: hidden; // wichtig für saubere Kanten
+    overflow: hidden;
 
     img {
       display: block;
       width: 100%;
-      height: 316px; // oder 320px, wie du es magst
-      object-fit: cover; // sorgt für gleichmäßige Höhe
+      height: 316px;
+      object-fit: cover;
       border-radius: 12px;
     }
   }
@@ -166,7 +37,6 @@
     align-self: start;
     color: var(--greenColor);
     text-align: left;
-    /* Standard: Bild links → Text linksbündig */
   }
 
   &__title {
@@ -185,7 +55,6 @@
     gap: 16px;
     align-self: start;
     justify-content: flex-start;
-    /* unter dem Text, linksbündig */
     margin-top: 16px;
 
     a {
@@ -202,12 +71,10 @@
 
   .project-card__content {
     text-align: right;
-    /* Text rechtsbündig */
   }
 
   .project-card__links {
     justify-content: flex-end;
-    /* Buttons rechts unter dem Text */
   }
 }
 
@@ -217,7 +84,6 @@
   .project-card,
   .project-card--flip {
     max-width: 720px;
-    /* enger, damit nichts klebt */
     grid-template-columns: 1fr;
     grid-template-areas:
       "content"

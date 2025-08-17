@@ -22,6 +22,8 @@ header.navbar {
 .logo {
   font-size: 2rem;
   font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
+  color: var(--redColor);
 }
 
 /* Desktop visible */
@@ -39,6 +41,7 @@ header.navbar {
   transition: color .1s;
   font-size: 22px;
   font-weight: 500;
+  cursor: pointer;
 
   &:hover {
     color: var(--greenColor);
@@ -92,12 +95,16 @@ header.navbar {
   display: none;
   z-index: 999;
 
+  a {
+    cursor: pointer;
+  }
+
   /* Body-Gradient */
   background: linear-gradient(165deg,
-      var(--bg-black) 10%,
-      var(--bg-red) 40%,
-      var(--bg-black) 80%,
-      var(--bg-green) 100%);
+    var(--bg-black) 10%,
+    var(--bg-red) 40%,
+    var(--bg-black) 80%,
+    var(--bg-green) 100%);
 }
 
 .mobile-menu.open {
