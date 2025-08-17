@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { filter, first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -9,42 +10,41 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-  private router = inject(Router);
   isMenuOpen = false;
 
-  goToSection(id: string) {
-    this.isMenuOpen = false;
+  constructor(private router: Router) { }
 
-    if (this.router.url !== '/' && !this.router.url.startsWith('/?')) {
-      this.router.navigateByUrl('/').then(() => {
-        setTimeout(() => this.scrollIntoView(id), 0);
-      });
-    } else {
-      this.scrollIntoView(id);
+  /** Klick auf Logo: zurück zum Anfang der Startseite */
+  async scrollTop() {
+    await this.ensureHome();
+    this.smoothScrollTo(document.body);
+  }
+
+  /** Einheitlich für Desktop & Mobile: zum Abschnitt scrollen */
+  async goToSection(sectionId: string) {
+    this.isMenuOpen = false;
+    await this.ensureHome();              // ggf. erst nach / navigieren
+    const target = document.getElementById(sectionId);
+    if (target) {
+      // kleines Delay, damit Layout nach dem Route-Wechsel sicher gerendert ist
+      requestAnimationFrame(() => this.smoothScrollTo(target));
     }
   }
 
-  goHome() {
-    this.isMenuOpen = false;
-    if (this.router.url !== '/') {
-      this.router.navigateByUrl('/');
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  /** Wenn nicht auf Home, erst zur Startseite navigieren und Navigation-Ende abwarten */
+  private async ensureHome(): Promise<void> {
+    if (this.router.url === '/' || this.router.url.startsWith('/#')) {
+      return;
     }
+    await this.router.navigateByUrl('/');
+    // Warten bis Navigation abgeschlossen ist
+    await this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd),
+      first()
+    );
   }
 
-  private scrollIntoView(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      setTimeout(() => this.scrollIntoView(id), 100);
-    }
+  private smoothScrollTo(el: Element) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
