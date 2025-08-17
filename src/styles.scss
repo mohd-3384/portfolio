@@ -7,11 +7,12 @@
 :root {
   --bg-black: rgba(0, 0, 0);
   --bg-red: rgba(20, 0, 0);
-  --bg-grey: rgba(25, 25, 25);
   --bg-green: rgba(0, 16, 0);
   --redColor: #E15544;
   --greenColor: #009639;
   --transition125: 0.125s;
+  --transition250: 0.25s;
+  --transition300: 0.3s;
 }
 
 body {
@@ -22,8 +23,13 @@ body {
       var(--bg-red) 40%,
       var(--bg-green) 60%,
       var(--bg-black) 80%,
-      var(--bg-grey) 100%);
-  height: 8000px
+      var(--bg-red) 90%);
+}
+
+@media (min-width: 768px) and (max-width: 826px) {
+  .container {
+    max-width: 646px !important;
+  }
 }
 
 main {

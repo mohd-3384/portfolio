@@ -22,15 +22,9 @@
   object-fit: cover;
 }
 
-// .hero {
-//   margin-top: 96px;
-//   padding-block: clamp(32px, 7vw, 64px);
-//   color: var(--redColor);
-//   position: relative;
-// }
 .hero {
   padding: clamp(48px, 8vw, 96px) 0 24px; // unten nur 48px
-  margin-top: 32px;
+  margin-top: 72px;
   color: var(--redColor);
   position: relative;
 }

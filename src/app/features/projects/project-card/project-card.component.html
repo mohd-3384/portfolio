@@ -1,0 +1,20 @@
+<div class="project-card" [class.project-card--flip]="flip">
+  <div class="project-card__image">
+    <img [src]="project.image" [alt]="project.title" />
+  </div>
+
+  <div class="project-card__content">
+    <h3 class="project-card__title">{{ project.title }}</h3>
+    <p class="project-card__tech">{{ project.tech.join(' | ') }}</p>
+    <p class="project-card__desc">{{ project.description }}</p>
+  </div>
+
+  <div class="project-card__links">
+    @if (project.github) {
+    <a [href]="project.github" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+    }
+    @if (project.live) {
+    <a [href]="project.live" target="_blank" rel="noopener" class="btn btn-primary">Live Test</a>
+    }
+  </div>
+</div>
