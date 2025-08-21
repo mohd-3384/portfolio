@@ -1,34 +1,99 @@
 .legal {
   padding: clamp(48px, 8vw, 96px) 0;
-  color: var(--greenColor);
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
   h1 {
-    font-size: clamp(28px, 5vw, 40px);
+    font-size: clamp(28px, 4.5vw, 48px);
     font-weight: 800;
-    margin-bottom: 24px;
     color: var(--redColor);
+    margin: 0 0 20px 0;
   }
 
   h2 {
-    margin-top: 32px;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: clamp(18px, 2.6vw, 24px);
+    font-weight: 800;
     color: var(--redColor);
+    margin: 28px 0 12px;
   }
 
   p,
-  a {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 12px;
+  li {
     color: var(--greenColor);
+    line-height: 1.6;
   }
 
-  a {
+  .imprint-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  a.mail {
+    color: var(--greenColor);
     text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color var(--transition125) ease, text-decoration-color .2s ease;
 
     &:hover {
       color: var(--redColor);
+      text-decoration-color: currentColor;
     }
+  }
+
+  .date {
+    margin-top: 20px;
+    opacity: .9;
+  }
+
+  .redColor {
+    color: var(--redColor);
+  }
+}
+
+.back-btn {
+  display: none;
+  position: absolute;
+  top: 116px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all var(--transition125) ease;
+  cursor: pointer;
+
+  .back-icon {
+    transition: filter 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid var(--greenColor);
+    border-radius: 4px;
+
+    .back-icon {
+      content: url("/assets/images/arrow_back_green.png");
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .back-icon {
+    width: 70%;
+    height: 70%;
+  }
+
+  .back-btn {
+    right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }

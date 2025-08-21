@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
+  // TODO: snackbar/Toast wenn die email versendet wurde
+  // TODO: Send button disabled
 }
