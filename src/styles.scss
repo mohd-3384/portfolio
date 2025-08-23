@@ -50,3 +50,29 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+/* Chrome / Edge / Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  /* Text-/Caret-Color */
+  -webkit-text-fill-color: var(--greenColor);
+  caret-color: var(--greenColor);
+
+  /* delete white background */
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  box-shadow: 0 0 0 1000px transparent inset;
+
+  transition: background-color 9999s ease, color 9999s ease;
+}
+
+/* Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0 1000px transparent inset;
+  -moz-text-fill-color: var(--greenColor);
+  caret-color: var(--greenColor);
+}
