@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './features/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
+
 
 export const routes: Routes = [
   {
@@ -10,14 +11,14 @@ export const routes: Routes = [
   {
     path: 'legal-notice',
     loadComponent: () =>
-      import('./features/legal-notice/legal-notice.component')
+      import('./pages/legal-notice/legal-notice.component')
         .then(m => m.LegalNoticeComponent),
     title: 'Legal Notice',
   },
   {
     path: 'privacy-policy',
     loadComponent: () =>
-      import('./features/privacy-policy/privacy-policy.component')
+      import('./pages/privacy-policy/privacy-policy.component')
         .then(m => m.PrivacyPolicyComponent),
     title: 'Privacy Policy',
   },

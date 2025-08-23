@@ -6,24 +6,21 @@
 
 :root {
   --bg-black: rgba(0, 0, 0);
-  --bg-red: rgba(20, 0, 0);
-  --bg-green: rgba(0, 16, 0);
+  --bg-grey: rgba(40, 40, 40);
   --redColor: #E15544;
   --greenColor: #009639;
   --transition125: 0.125s;
-  --transition250: 0.25s;
-  --transition300: 0.3s;
 }
 
 body {
   font-family: 'Roboto Mono', monospace;
-  color: #E15544;
+  color: var(--redColor);
   background: linear-gradient(165deg,
       var(--bg-black) 10%,
-      var(--bg-red) 40%,
-      var(--bg-green) 60%,
+      var(--bg-grey) 40%,
+      var(--bg-black) 60%,
       var(--bg-black) 80%,
-      var(--bg-red) 90%);
+      var(--bg-grey) 120%);
 }
 
 @media (min-width: 768px) and (max-width: 826px) {
@@ -75,4 +72,9 @@ textarea:-moz-autofill {
   box-shadow: 0 0 0 1000px transparent inset;
   -moz-text-fill-color: var(--greenColor);
   caret-color: var(--greenColor);
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.3);
+  color: whitesmoke;
 }
