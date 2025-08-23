@@ -6,9 +6,9 @@
       </div>
 
       <div class="about__why-text">
-        <h3 class="about__why-title">Why me</h3>
+        <h3 class="about__why-title" revealOnScroll>Why me</h3>
 
-        <p>
+        <p revealOnScroll [delay]="200">
           I’m a passionate Frontend Developer who thrives at the intersection of design and technology.
           For me, coding is more than just writing lines of code – it’s about crafting intuitive, engaging,
           and visually appealing digital experiences that bring ideas to life.
@@ -27,7 +27,8 @@
           efficient, and impactful. -->
         </p>
 
-        <ul class="about__facts">
+        <ul class="about__facts" revealOnScroll [revealStartClass]="'reveal-left-start'"
+          [revealClass]="'reveal-left-in'" [delay]="400">
           <li class="iam">I am</li>
           <li class="fact-item loc">
             <div class="locate-img-wrap">
@@ -48,7 +49,8 @@
           <img class="arrow arrow-to-button" src="/assets/images/Arrow_01.png" alt="arrow to button" />
         </ul>
 
-        <a class="btn btn-primary border-none cta talk" href="#contact">Let’s talk</a>
+        <a class="btn btn-primary border-none cta talk" href="#contact" revealOnScroll
+          [revealStartClass]="'reveal-right-start'" [revealClass]="'reveal-right-in'" [delay]="1000">Let’s talk</a>
       </div>
     </div>
   </div>

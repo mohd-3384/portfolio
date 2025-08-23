@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ProjectItem } from '../../core/interfaces/project-item';
 import { ProjectCardComponent } from "./project-card/project-card.component";
+import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
+import { StaggerChildrenDirective } from '../../shared/directives/stagger-children.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent],
+  imports: [ProjectCardComponent, RevealOnScrollDirective, StaggerChildrenDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
