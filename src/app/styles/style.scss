@@ -71,9 +71,6 @@
   display: none !important;
 }
 
-
-
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -97,7 +94,6 @@
   opacity: 1;
   transform: translateY(0);
   transition: none;
-  /* <<< wichtig */
 }
 
 /* ===============================
@@ -116,7 +112,6 @@
   opacity: 1;
   transform: translateX(0);
   transition: none;
-  /* <<< wichtig */
 }
 
 /* ===============================

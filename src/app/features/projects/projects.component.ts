@@ -3,11 +3,12 @@ import { ProjectItem } from '../../core/interfaces/project-item';
 import { ProjectCardComponent } from "./project-card/project-card.component";
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { StaggerChildrenDirective } from '../../shared/directives/stagger-children.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent, RevealOnScrollDirective, StaggerChildrenDirective],
+  imports: [ProjectCardComponent, RevealOnScrollDirective, StaggerChildrenDirective, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

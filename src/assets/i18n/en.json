@@ -1,0 +1,86 @@
+{
+  "header": {
+    "logo": "<MA>",
+    "whyme": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "langDe": "DE",
+    "langEn": "EN"
+  },
+  "hero": {
+    "contactBtn": "Contact me",
+    "role": "FRONTEND DEVELOPER",
+    "name": "Mohammed Abumustafa",
+    "scrollAlt": "Scroll down"
+  },
+  "about": {
+    "title": "Why me",
+    "intro": "I’m a passionate Frontend Developer who thrives at the intersection of design and technology. For me, coding is more than just writing lines of code – it’s about crafting intuitive, engaging, and visually appealing digital experiences that bring ideas to life.",
+    "iam": "I am",
+    "location": "located in Wuppertal",
+    "remote": "open to work remote",
+    "cta": "Let’s talk"
+  },
+  "skills": {
+    "title": "My Skills",
+    "empty": "No skills available.",
+    "challengeTitle": "Challenge me",
+    "challengeText": "I am always happy to learn new technologies,<br />just tell me what you need."
+  },
+  "projects": {
+    "title": "My Projects"
+  },
+  "contact": {
+    "title": "Contact me",
+    "lead": "Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.",
+    "consentPrefix": "I've read the",
+    "consentLink": "privacy policy",
+    "consentSuffix": "and agree to the processing of my data as outlined.",
+    "send": "Send"
+  },
+  "footer": {
+    "subtitle": "Frontend Developer",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "legal": {
+    "title": "Legal Notice (Imprint)",
+    "subtitle": "Provider identification pursuant to § 5 DDG",
+    "providerTitle": "Provider",
+    "contactTitle": "Contact",
+    "liabilityContentTitle": "Liability for content",
+    "liabilityContentText": "The content on these pages has been created with due care. However, I cannot guarantee the accuracy, completeness or timeliness of the content.",
+    "liabilityLinksTitle": "Liability for links",
+    "liabilityLinksText": "External links were checked at the time of linking. The respective providers are solely responsible for the content of external websites; continuous monitoring without specific indications of infringement is not reasonable.",
+    "copyrightTitle": "Copyright",
+    "copyrightText": "The content and works on these pages are subject to copyright. Any use beyond the limits of copyright law requires my prior consent, unless otherwise permitted by law.",
+    "consumerTitle": "Consumer dispute resolution",
+    "consumerText": "I am neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "lastUpdated": "Last updated: {{date}}"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This notice explains how I process personal data when you use this website and how you can exercise your rights under the General Data Protection Regulation (GDPR).",
+    "controller": "Controller",
+    "accessLogs": "Access data (server logs)",
+    "contact": "Contact",
+    "cookies": "Cookies & similar technologies",
+    "thirdparty": "Third-party content",
+    "processors": "Recipients and processors",
+    "storage": "Storage period",
+    "rights": "Your rights under the GDPR",
+    "changes": "Changes to this notice",
+    "updated": "Last updated: {{date}}",
+    "paragraphs": {
+      "accessLogs": "When you access this site, the web server processes technical data (e.g., IP address, date/time, URL, referrer, user agent) to deliver the website and ensure security. Processing is based on Art. 6(1)(f) GDPR (legitimate interests in operating a secure and reliable website). Log files are retained only as long as necessary and then deleted or anonymised.",
+      "contact": "If you contact me (e.g., via contact form or email), I process your data (name, email, message and any information you provide) to handle your request. The legal basis is Art. 6(1)(b) GDPR (pre-contractual/contractual communication) or Art. 6(1)(f) GDPR (legitimate interests in responding to inquiries). Data will be deleted when your inquiry has been resolved unless legal retention duties require otherwise.",
+      "cookies": "This site is designed to work without non-essential cookies. If I ever use non-essential cookies (e.g., analytics), I will request your consent first. In Germany, storing or accessing information on your device requires consent under § 25 TTDSG unless strictly necessary.",
+      "thirdparty": "If I embed third-party content (e.g., GitHub, LinkedIn, external images, fonts or videos), the providers may receive your IP address and set their own technologies. Please refer to the respective providers’ privacy policies. Where possible, I use privacy-friendly defaults (no tracking, deferred loading).",
+      "processors": "I may use service providers (e.g., hosting, email) who process data on my behalf under Art. 28 GDPR. If providers outside the EU/EEA are used, transfers comply with Chapter V GDPR (e.g., adequacy decision or appropriate safeguards).",
+      "storage": "I retain personal data only as long as necessary for the purposes described or to comply with legal obligations; afterwards data is deleted or anonymised.",
+      "rights": "You have the right of access (Art. 15 GDPR), rectification (Art. 16 GDPR), erasure (Art. 17 GDPR), restriction (Art. 18 GDPR), data portability (Art. 20 GDPR), and to object (Art. 21 GDPR). Where processing is based on consent, you can withdraw it at any time with effect for the future (Art. 7(3) GDPR). You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR).",
+      "changes": "I may update this privacy notice from time to time to reflect legal or technical changes. The current version is indicated below."
+    }
+  }
+}

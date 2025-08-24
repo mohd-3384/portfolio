@@ -16,8 +16,6 @@ export class ParallaxDirective {
   onScroll() {
     if (!this.isBrowser) return;
     const y = window.scrollY * this.speed;
-    // Achtung: Setzt transform inline; nutze dieses Directive auf einem Kind-Element,
-    // das NICHT gleichzeitig via CSS-Transition (Reveal) transformiert wird.
     this.el.nativeElement.style.transform = `translate3d(0, ${y}px, 0)`;
     this.el.nativeElement.style.willChange = 'transform';
   }

@@ -102,9 +102,10 @@ header.navbar {
   /* Body-Gradient */
   background: linear-gradient(165deg,
     var(--bg-black) 10%,
-    var(--bg-red) 40%,
+    var(--bg-grey) 40%,
+    var(--bg-black) 60%,
     var(--bg-black) 80%,
-    var(--bg-green) 100%);
+    var(--bg-grey) 120%);
 }
 
 .mobile-menu.open {

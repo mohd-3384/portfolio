@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
   email = 'mohammed.abumustafa@hotmail.com';
+  tel = '0176 631 248 96'
 
   constructor(private router: Router) { }
 

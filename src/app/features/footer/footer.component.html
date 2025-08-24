@@ -6,7 +6,7 @@
         <a class="logo pointer" routerLink="/">
           &lt;MA&gt;
         </a>
-        <div class="footer__subtitle">frontend developer</div>
+        <div class="footer__subtitle">{{ 'footer.subtitle' | translate }}</div>
       </div>
     </div>
 
@@ -17,8 +17,8 @@
       </div>
 
       <nav class="footer__links" aria-label="Legal">
-        <a routerLink="/legal-notice" routerLinkActive="active">Legal notice</a>
-        <a routerLink="/privacy-policy" routerLinkActive="active">Privacy policy</a>
+        <a routerLink="/legal-notice" routerLinkActive="active">{{ 'footer.legalNotice' | translate }}</a>
+        <a routerLink="/privacy-policy" routerLinkActive="active">{{ 'footer.privacyPolicy' | translate }}</a>
       </nav>
     </div>
 

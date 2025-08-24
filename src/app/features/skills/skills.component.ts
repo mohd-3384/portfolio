@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { StaggerChildrenDirective } from '../../shared/directives/stagger-children.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [RevealOnScrollDirective, StaggerChildrenDirective],
+  imports: [RevealOnScrollDirective, StaggerChildrenDirective, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

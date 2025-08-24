@@ -6,35 +6,19 @@
       </div>
 
       <div class="about__why-text">
-        <h3 class="about__why-title" revealOnScroll>Why me</h3>
-
-        <p revealOnScroll [delay]="200">
-          I’m a passionate Frontend Developer who thrives at the intersection of design and technology.
-          For me, coding is more than just writing lines of code – it’s about crafting intuitive, engaging,
-          and visually appealing digital experiences that bring ideas to life.
-          <!-- </p>
+        <h3 class="about__why-title">{{ 'about.title' | translate }}</h3>
 
         <p>
-          Based in Wuppertal, I’m comfortable working remotely and enjoy collaborating with teams across
-          different locations. My approach blends precision with creativity: I value clean, maintainable code
-          just as much as I value an interface that feels effortless for the user.
+          {{ 'about.intro' | translate }}
         </p>
 
-        <p>
-          I’m constantly learning and keeping up with evolving web technologies, because I believe that
-          curiosity and adaptability are essential in our fast-paced industry. Whether tackling complex
-          challenges or polishing the smallest UI detail, I take pride in delivering work that’s thoughtful,
-          efficient, and impactful. -->
-        </p>
-
-        <ul class="about__facts" revealOnScroll [revealStartClass]="'reveal-left-start'"
-          [revealClass]="'reveal-left-in'" [delay]="400">
-          <li class="iam">I am</li>
+        <ul class="about__facts">
+          <li class="iam">{{ 'about.iam' | translate }}</li>
           <li class="fact-item loc">
             <div class="locate-img-wrap">
               <img src="/assets/images/locate.png" alt="Location" class="locate-img" />
             </div>
-            <span>located in Wuppertal</span>
+            <span>{{ 'about.location' | translate }}</span>
           </li>
 
           <img class="arrow arrow-to-remote" src="/assets/images/Arrow_5.png" alt="arrow to remote" />
@@ -43,14 +27,16 @@
             <div class="remote-img-wrap">
               <img src="/assets/images/remote2.png" alt="Remote" class="remote-img" />
             </div>
-            <span>open to work remote</span>
+            <span>{{ 'about.remote' | translate }}</span>
           </li>
 
           <img class="arrow arrow-to-button" src="/assets/images/Arrow_01.png" alt="arrow to button" />
         </ul>
 
-        <a class="btn btn-primary border-none cta talk" href="#contact" revealOnScroll
-          [revealStartClass]="'reveal-right-start'" [revealClass]="'reveal-right-in'" [delay]="1000">Let’s talk</a>
+        <a class="btn btn-primary border-none cta talk" href="#contact">
+          {{ 'about.cta' | translate }}
+        </a>
+
       </div>
     </div>
   </div>

@@ -1,36 +1,76 @@
-<section class="privacy">
+<section class="privacy" id="privacy-policy">
   <div class="container">
-
-    <!-- Back Arrow nur für Mobile/Tablet -->
     <button class="back-btn" (click)="goBack()" aria-label="Back">
       <img src="/assets/images/arrow_back_red.png" alt="Back Arrow" class="back-icon" />
     </button>
 
-    <h1>Privacy Policy</h1>
-    <p>
-      Protecting your personal data is important to me. This website can
-      generally be used without providing personal information. Where personal
-      data (such as name, email address) is collected, this is done on a
-      voluntary basis.
-    </p>
+    <h1 class="privacy__title">{{ 'privacy.title' | translate }}</h1>
+    <p class="privacy__intro">{{ 'privacy.intro' | translate }}</p>
 
-    <h2>Cookies</h2>
-    <p>
-      This website may use cookies to improve the user experience. You can
-      configure your browser to refuse cookies or notify you when cookies are
-      being used.
-    </p>
+    <!-- 1) Controller -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.controller' | translate }}</h2>
+      <address class="privacy__address">
+        <strong>Mohammed Abumustafa</strong><br>
+        Tütersburg 38<br>
+        42277 Wuppertal
+      </address>
+      <ul class="privacy__list">
+        <li>Email: <a [href]="'mailto:' + email">{{ email }}</a></li>
+        <li>Phone: <a [href]="'tel:' + tel">{{ tel }}</a></li>
+      </ul>
+    </div>
 
-    <h2>Third-Party Services</h2>
-    <p>
-      If external services such as GitHub, LinkedIn, or others are integrated,
-      their privacy policies apply.
-    </p>
+    <!-- 2) Access data / server logs -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.accessLogs' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.accessLogs' | translate }}</p>
+    </div>
 
-    <h2>Contact</h2>
-    <p>
-      For questions regarding data protection, you can contact me at:
-      <a [href]="'mailto:' + email">{{ email }}</a>
+    <!-- 3) Contact -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.contact' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.contact' | translate }}</p>
+    </div>
+
+    <!-- 4) Cookies -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.cookies' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.cookies' | translate }}</p>
+    </div>
+
+    <!-- 5) Third-party content -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.thirdparty' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.thirdparty' | translate }}</p>
+    </div>
+
+    <!-- 6) Recipients / processors -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.processors' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.processors' | translate }}</p>
+    </div>
+
+    <!-- 7) Storage period -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.storage' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.storage' | translate }}</p>
+    </div>
+
+    <!-- 8) Your rights -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.rights' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.rights' | translate }}</p>
+    </div>
+
+    <!-- 9) Changes -->
+    <div class="privacy__card">
+      <h2 class="privacy__h2">{{ 'privacy.changes' | translate }}</h2>
+      <p>{{ 'privacy.paragraphs.changes' | translate }}</p>
+    </div>
+
+    <p class="privacy__stand">
+      {{ 'privacy.updated' | translate:{ date: today } }}
     </p>
   </div>
 </section>

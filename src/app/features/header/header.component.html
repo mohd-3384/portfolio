@@ -8,18 +8,18 @@
 
       <!-- Desktop-Navigation -->
       <nav class="desktop-nav">
-        <a (click)="goToSection('about')">Why me</a>
-        <a (click)="goToSection('skills')">Skills</a>
-        <a (click)="goToSection('projects')">Projects</a>
-        <a (click)="goToSection('contact')">Contact</a>
+        <a (click)="goToSection('about')">{{ 'header.whyme' | translate }}</a>
+        <a (click)="goToSection('skills')">{{ 'header.skills' | translate }}</a>
+        <a (click)="goToSection('projects')">{{ 'header.projects'| translate }}</a>
+        <a (click)="goToSection('contact')">{{ 'header.contact' | translate }}</a>
       </nav>
     </div>
 
     <!-- Desktop Buttons -->
     <div class="buttons desktop-buttons gap-1">
-      <a class="github" href="#">DE</a>
+      <a class="github" href="#" (click)="set('de')" [class.active]="cur==='de'">{{ 'header.langDe' | translate }}</a>
       <div>|</div>
-      <a class="live" href="#">EN</a>
+      <a class="live" href="#" (click)="set('en')" [class.active]="cur==='en'">{{ 'header.langEn' | translate }}</a>
     </div>
 
     <!-- Burger (only Mobile) -->
@@ -35,15 +35,16 @@
     </button>
 
     <nav class="mobile-nav" (click)="$event.stopPropagation()">
-      <a (click)="goToSection('about')">Why me</a>
-      <a (click)="goToSection('skills')">Skills</a>
-      <a (click)="goToSection('projects')">Projects</a>
-      <a (click)="goToSection('contact')">Contact</a>
+      <a (click)="goToSection('about')">{{ 'header.whyme' | translate }}</a>
+      <a (click)="goToSection('skills')">{{ 'header.skills' | translate }}</a>
+      <a (click)="goToSection('projects')">{{ 'header.projects' | translate }}</a>
+      <a (click)="goToSection('contact')">{{ 'header.contact' | translate }}</a>
 
       <div class="lang">
-        <a class="github" href="#" (click)="isMenuOpen=false">DE</a>
+        <a (click)="set('de')" [class.active]="cur==='de'">{{ 'header.langDe' | translate }}</a>
         <span>|</span>
-        <a class="live" href="#" (click)="isMenuOpen=false">EN</a>
+        <a (click)="set('en')" [class.active]="cur==='en'">{{ 'header.langEn' | translate }}</a>
+
       </div>
     </nav>
   </div>

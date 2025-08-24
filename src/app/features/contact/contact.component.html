@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Title -->
     <h1 class="contact-title">
-      Contact me
+      {{ 'contact.title' | translate }}
       <img src="/assets/images/arrow_7.png" alt="arrow" class="arrow-title" />
     </h1>
 
@@ -11,8 +11,7 @@
         <!-- Left: contact me text -->
         <div class="contact-text">
           <p class="lead">
-            Encourage people to contact you and describe what role you are interested in.
-            Express interest in contributing to a new project.
+            {{ 'contact.lead' | translate }}
           </p>
         </div>
 
@@ -87,13 +86,18 @@
           <label>
             <input type="checkbox" formControlName="privacy" />
             <span class="custom-checkbox" aria-hidden="true"></span>
-            I've read the <a class="privacy" routerLink="/privacy-policy">privacy policy</a>
-            and agree to the processing of my data as outlined.
+            <span class="consent-text">
+              {{ 'contact.consentPrefix' | translate }}
+              <a class="privacy" [routerLink]="'/privacy-policy'">
+                {{ 'contact.consentLink' | translate }}
+              </a>
+              {{ 'contact.consentSuffix' | translate }}
+            </span>
           </label>
         </div>
 
         <button type="submit" class="btn submit-btn" [disabled]="isSending || contactForm.invalid">
-          Send
+          {{ 'contact.send' | translate }}
         </button>
       </div>
     </form>

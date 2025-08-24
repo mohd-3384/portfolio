@@ -1,24 +1,21 @@
 <section class="hero" id="hero">
   <div class="container">
-    <div class="hero__wrap" staggerChildren
-      [childSelector]="'.hero__contact-btn, .hero__text, .hero__image img, .hero__scroll-btn'" [step]="200">
+    <div class="hero__wrap">
 
-      <a href="#contact" class="hero__contact-btn" revealOnScroll>
-        CONTACT ME
+      <a href="#contact" class="hero__contact-btn">
+        {{ 'hero.contactBtn' | translate }}
       </a>
 
-      <div class="hero__text" revealOnScroll [revealStartClass]="'reveal-fade-start'" [revealClass]="'reveal-fade-in'"
-        [durationMs]="1200" [initialInViewDelayMs]="300">
-        <h1 class="hero__role" splitLetters>FRONTEND DEVELOPER</h1>
-        <h2 class="hero__name" splitLetters>Mohammed Abumustafa</h2>
+      <div class="hero__text">
+        <h1 class="hero__role">{{ 'hero.role' | translate }}</h1>
+        <h2 class="hero__name">{{ 'hero.name' | translate }}</h2>
       </div>
 
-      <div class="hero__image" revealOnScroll [revealStartClass]="'reveal-scale-start'"
-        [revealClass]="'reveal-scale-in'" [durationMs]="2000" [initialInViewDelayMs]="500">
+      <div class="hero__image">
         <img src="/assets/images/IMG-1.jpg" alt="Mohammed Abumustafa" />
       </div>
 
-      <a href="#about" class="hero__scroll-btn" revealOnScroll>
+      <a href="#about" class="hero__scroll-btn">
         <img src="/assets/images/arrow_down_red.png" alt="Scroll down" />
       </a>
 

@@ -14,14 +14,13 @@ export class SplitLettersDirective implements AfterViewInit {
     const textNodes: Text[] = [];
     let n: Node | null;
 
-    // Alle Textknoten einsammeln (H1/H2)
     while ((n = walker.nextNode())) {
       const t = n as Text;
       const val = t.nodeValue ?? '';
       if (val.trim().length) textNodes.push(t);
     }
 
-    let i = 0; // laufender Index für --i
+    let i = 0;
 
     textNodes.forEach(tn => {
       const frag = document.createDocumentFragment();
@@ -36,14 +35,11 @@ export class SplitLettersDirective implements AfterViewInit {
         span.className = 'char';
         span.textContent = ch;
         span.style.setProperty('--i', String(i++));
-        // Startfarbe grün (wird von Animation überschrieben)
         span.style.color = 'var(--greenColor)';
         frag.appendChild(span);
       }
 
-      // Original-Textknoten ersetzen
       tn.parentNode?.replaceChild(frag, tn);
     });
   }
-
 }

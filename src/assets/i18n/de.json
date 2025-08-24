@@ -1,0 +1,86 @@
+{
+  "header": {
+    "logo": "<MA>",
+    "whyme": "Warum ich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "langDe": "DE",
+    "langEn": "EN"
+  },
+  "hero": {
+    "contactBtn": "Kontaktiere mich",
+    "role": "FRONTEND ENTWICKLER",
+    "name": "Mohammed Abumustafa",
+    "scrollAlt": "Nach unten scrollen"
+  },
+  "about": {
+    "title": "Warum ich",
+    "intro": "Ich bin ein leidenschaftlicher Frontend-Entwickler, der an der Schnittstelle von Design und Technologie aufblüht. Für mich bedeutet Coden mehr als nur Zeilen Code zu schreiben – es geht darum, intuitive, ansprechende und visuell überzeugende digitale Erlebnisse zu gestalten, die Ideen zum Leben erwecken.",
+    "iam": "Ich bin",
+    "location": "ansässig in Wuppertal",
+    "remote": "offen für Remote-Arbeit",
+    "cta": "Lass uns reden"
+  },
+  "skills": {
+    "title": "Meine Fähigkeiten",
+    "empty": "Keine Skills vorhanden.",
+    "challengeTitle": "Fordere mich heraus",
+    "challengeText": "Ich freue mich immer, neue Technologien zu lernen,<br />sag mir einfach, was du brauchst."
+  },
+  "projects": {
+    "title": "Meine Projekte"
+  },
+  "contact": {
+    "title": "Kontaktiere mich",
+    "lead": "Ermutige Menschen, dich zu kontaktieren und beschreibe, für welche Rolle du dich interessierst. Zeige Interesse, an einem neuen Projekt mitzuwirken.",
+    "consentPrefix": "Ich habe die",
+    "consentLink": "Datenschutzerklärung",
+    "consentSuffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "send": "Senden"
+  },
+  "footer": {
+    "subtitle": "Frontend-Entwickler",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutzerklärung"
+  },
+  "legal": {
+    "title": "Impressum",
+    "subtitle": "Anbieterkennzeichnung gemäß § 5 DDG",
+    "providerTitle": "Anbieter",
+    "contactTitle": "Kontakt",
+    "liabilityContentTitle": "Haftung für Inhalte",
+    "liabilityContentText": "Die Inhalte dieser Seite wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.",
+    "liabilityLinksTitle": "Haftung für Links",
+    "liabilityLinksText": "Externe Links wurden zum Zeitpunkt der Verlinkung geprüft. Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich; eine dauerhafte Kontrolle ohne konkrete Anhaltspunkte einer Rechtsverletzung ist nicht zumutbar.",
+    "copyrightTitle": "Urheberrecht",
+    "copyrightText": "Inhalte und Werke auf diesen Seiten unterliegen dem Urheberrecht. Jede Nutzung außerhalb der gesetzlichen Grenzen bedarf meiner vorherigen Zustimmung, sofern nicht gesetzlich erlaubt.",
+    "consumerTitle": "Verbraucherstreitbeilegung",
+    "consumerText": "Ich bin weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "lastUpdated": "Stand: {{date}}"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Hinweise erklären, wie ich personenbezogene Daten verarbeite, wenn Sie diese Website nutzen, und welche Rechte Sie nach der Datenschutz-Grundverordnung (DSGVO) haben.",
+    "controller": "Verantwortlicher",
+    "accessLogs": "Zugriffsdaten (Server-Logs)",
+    "contact": "Kontakt",
+    "cookies": "Cookies & ähnliche Technologien",
+    "thirdparty": "Drittanbieter-Inhalte",
+    "processors": "Empfänger und Auftragsverarbeiter",
+    "storage": "Speicherdauer",
+    "rights": "Ihre Rechte nach der DSGVO",
+    "changes": "Änderungen dieser Datenschutzhinweise",
+    "updated": "Stand: {{date}}",
+    "paragraphs": {
+      "accessLogs": "Beim Aufruf dieser Website verarbeitet der Webserver technische Daten (z. B. IP-Adresse, Datum/Uhrzeit, URL, Referrer, User-Agent), um die Website bereitzustellen und die Sicherheit zu gewährleisten. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am Betrieb einer sicheren und zuverlässigen Website). Logdateien werden nur so lange gespeichert, wie es erforderlich ist, und anschließend gelöscht oder anonymisiert.",
+      "contact": "Wenn Sie mich kontaktieren (z. B. per Kontaktformular oder E-Mail), verarbeite ich Ihre Angaben (Name, E-Mail, Nachricht sowie weitere bereitgestellte Informationen), um Ihr Anliegen zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche/vertragliche Kommunikation) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald Ihr Anliegen erledigt ist, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+      "cookies": "Diese Website ist so gestaltet, dass sie ohne nicht erforderliche Cookies funktioniert. Falls zukünftig nicht zwingend erforderliche Cookies eingesetzt werden (z. B. zu Analysezwecken), werde ich zuvor Ihre Einwilligung einholen. In Deutschland ist gemäß § 25 TTDSG eine Einwilligung für das Speichern oder den Zugriff auf Informationen auf Ihrem Endgerät erforderlich, es sei denn, dies ist technisch unbedingt erforderlich.",
+      "thirdparty": "Wenn ich Inhalte Dritter einbinde (z. B. GitHub, LinkedIn, externe Bilder, Schriftarten oder Videos), können die Anbieter Ihre IP-Adresse erhalten und eigene Technologien einsetzen. Bitte beachten Sie die Datenschutzerklärungen der jeweiligen Anbieter. Soweit möglich, nutze ich datenschutzfreundliche Voreinstellungen (kein Tracking, verzögertes Laden).",
+      "processors": "Ich setze ggf. Dienstleister (z. B. Hosting, E-Mail) ein, die Daten in meinem Auftrag verarbeiten (Art. 28 DSGVO). Sofern Anbieter außerhalb der EU/des EWR eingesetzt werden, erfolgt eine Übermittlung nur unter Einhaltung von Kapitel V DSGVO (z. B. Angemessenheitsbeschluss oder geeignete Garantien).",
+      "storage": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die genannten Zwecke erforderlich ist oder wie es gesetzliche Pflichten verlangen. Danach werden die Daten gelöscht oder anonymisiert.",
+      "rights": "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie Widerspruch (Art. 21 DSGVO). Soweit die Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Zudem haben Sie das Recht, Beschwerde bei einer Aufsichtsbehörde einzulegen (Art. 77 DSGVO).",
+      "changes": "Ich kann diese Datenschutzerklärung von Zeit zu Zeit anpassen, um rechtliche oder technische Änderungen zu berücksichtigen. Die aktuelle Fassung ist unten angegeben."
+    }
+  }
+}
