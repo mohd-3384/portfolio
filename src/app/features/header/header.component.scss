@@ -132,13 +132,30 @@ header.navbar {
       color: var(--greenColor);
     }
   }
+}
 
-  .lang {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+.lang-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang {
+  color: var(--redColor);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all var(--transition125) ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
   }
+}
+
+.lang.active {
+  color: var(--greenColor);
 }
 
 /* Close „X“ */

@@ -52,9 +52,11 @@ export class HeaderComponent {
     if (saved) this.set(saved);
   }
 
-  set(lang: 'de' | 'en') {
+  set(lang: 'de' | 'en', ev?: Event) {
+    if (ev) ev.preventDefault();
     this.t.use(lang);
     this.cur = lang;
     localStorage.setItem('lang', lang);
   }
+
 }
