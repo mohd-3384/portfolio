@@ -1,12 +1,14 @@
 <section class="skills" id="skills">
   <div class="container">
 
-    <h3 class="skills__title">{{ 'skills.title' | translate }}</h3>
+    <h3 class="skills__title" revealOnScroll [revealStartClass]="'reveal-scale-start'"
+      [revealClass]="'reveal-scale-in'">{{ 'skills.title' | translate }}</h3>
 
-    <div class="skills__grid">
+    <div class="skills__grid" staggerChildren [childSelector]="'.skill'" [step]="220">
 
       @for (skill of skills; track skill.name) {
-      <div class="skill" [style.--hover-color]="skill.color">
+      <div class="skill" [style.--hover-color]="skill.color" revealOnScroll [revealStartClass]="'reveal-scale-start'"
+        [revealClass]="'reveal-scale-in'">
         <span class="skill__icon" [style.--icon-url]="'url(' + skill.icon + ')'"></span>
         <p class="skill__name">{{ skill.name }}</p>
       </div>
@@ -14,7 +16,8 @@
       <p>{{ 'skills.empty' | translate }}</p>
       }
 
-      <div class="skill challenge-skill">
+      <div class="skill challenge-skill" revealOnScroll [revealStartClass]="'reveal-scale-start'"
+        [revealClass]="'reveal-scale-in'">
         <img src="/assets/images/skills/challenge.svg" alt="Challenge">
         <p class="skill__name">Challenge me</p>
         <img src="/assets/images/Arrow_5.png" alt="" class="arrow_5">

@@ -137,3 +137,24 @@
     color: var(--redColor);
   }
 }
+
+@media (max-width: 650px) {
+
+  .project-card .reveal-start,
+  .project-card .reveal-left-start,
+  .project-card .reveal-right-start,
+  .project-card .text-behind-left-start,
+  .project-card .text-behind-right-start {
+    transform: scale(0.92) translateY(32px);
+    opacity: 0;
+  }
+
+  .project-card .reveal-in,
+  .project-card .reveal-left-in,
+  .project-card .reveal-right-in,
+  .project-card .text-behind-left-in,
+  .project-card .text-behind-right-in {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}

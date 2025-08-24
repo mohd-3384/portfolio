@@ -176,7 +176,8 @@
     As soon as the text block is visible, the letters begin to fade.
     Wait 280ms until the fade is visible; then add 55ms per letter.
 =============================== */
-.hero__text.reveal-fade-in .char {
+.hero__text.reveal-fade-in .char,
+.hero__text.reveal-scale-in .char {
   animation: char-to-red 0.6s ease forwards;
   animation-delay: calc(280ms + var(--i) * 55ms);
 }

@@ -1,16 +1,21 @@
 <div class="project-card" [class.project-card--flip]="flip">
 
-  <div class="project-card__image">
+  <div class="project-card__image" revealOnScroll [revealStartClass]="flip ? 'reveal-left-start' : 'reveal-right-start'"
+    [revealClass]="flip ? 'reveal-left-in'   : 'reveal-right-in'" [delay]="200">
     <img [src]="project.image" [alt]="project.title" />
   </div>
 
-  <div class="project-card__content">
-    <h3 class="project-card__title">{{ project.title }}</h3>
+  <div class="project-card__content" revealOnScroll
+    [revealStartClass]="flip ? 'text-behind-left-start' : 'text-behind-right-start'"
+    [revealClass]="flip ? 'text-behind-left-in'    : 'text-behind-right-in'" [delay]="450">
+    <h3 class="project-card__title">{{
+      project.title }}</h3>
     <p class="project-card__tech">{{ project.tech.join(' | ') }}</p>
     <p class="project-card__desc">{{ project.description }}</p>
   </div>
 
-  <div class="project-card__links">
+  <div class="project-card__links" revealOnScroll [revealStartClass]="'reveal-start'" [revealClass]="'reveal-in'"
+    [delay]="350">
     @if (project.github) {
     <a [href]="project.github" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
     }

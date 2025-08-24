@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RevealOnScrollDirective, StaggerChildrenDirective, SplitLettersDirective, TranslateModule],
+  imports: [RevealOnScrollDirective, SplitLettersDirective, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
