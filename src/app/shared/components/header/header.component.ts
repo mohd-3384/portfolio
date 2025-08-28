@@ -46,10 +46,10 @@ export class HeaderComponent {
   }
 
   ngOnInit() {
-    this.t.addLangs(['de', 'en']);
-    this.t.setDefaultLang('de');
-    const saved = localStorage.getItem('lang') as 'de' | 'en' | null;
-    if (saved) this.set(saved);
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || '';
+    const browser = (typeof navigator !== 'undefined' && navigator.language.slice(0, 2)) || 'de';
+    const active = (saved === 'de' || saved === 'en') ? saved : (browser === 'en' ? 'en' : 'de');
+    this.t.use(active);
   }
 
   set(lang: 'de' | 'en', ev?: Event) {

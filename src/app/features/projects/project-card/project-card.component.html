@@ -11,7 +11,9 @@
     <h3 class="project-card__title">{{
       project.title }}</h3>
     <p class="project-card__tech">{{ project.tech.join(' | ') }}</p>
-    <p class="project-card__desc">{{ project.description }}</p>
+    <p class="project-card__desc">
+      {{ descKey(project.title) | translate }}
+    </p>
   </div>
 
   <div class="project-card__links" revealOnScroll [revealStartClass]="'reveal-start'" [revealClass]="'reveal-in'"

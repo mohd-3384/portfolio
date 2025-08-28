@@ -29,6 +29,20 @@
   "projects": {
     "title": "Meine Projekte"
   },
+  "projectCard": {
+    "join": {
+      "description": "Join ist ein kollaboratives Kanban-Board für Aufgabenverwaltung. Aufgaben lassen sich per Drag-and-Drop organisieren, filtern und durchsuchen; Kommentare und Status unterstützen den Team-Workflow. Firebase übernimmt Authentifizierung und Echtzeit-Synchronisierung, sodass Änderungen sofort sichtbar sind. Das responsive UI ist auf schnelle, klare Bedienung ausgelegt."
+    },
+    "el-pollo-loco": {
+      "description": "El Pollo Loco ist ein 2D-Jump-and-Run-Browsergame. Sammle Coins und Salsa-Flaschen, weiche Gegnern aus, besiege Chickens durch Sprünge und den Endboss mit Flaschenwürfen. Umgesetzt in Vanilla JavaScript mit OOP-Struktur; Animations-Loop, Kollisionsabfragen und Sprite-Handling sorgen für flüssiges Gameplay. Statusleisten zeigen Health, Coins und Bottles."
+    },
+    "pokedex": {
+      "description": "Pokédex ist eine Web-App, die Pokémon-Daten aus der PokeAPI lädt. Du kannst Pokémon suchen und filtern; Karten zeigen Bild, Typen und ID. Ein Overlay mit Tabs (Main, Stats, Evo Chain) liefert Details wie Größe, Gewicht, Fähigkeiten und Werte. Das UI ist responsiv und mit Bootstrap umgesetzt; „Load more“ lädt weitere Einträge."
+    },
+    "portfolio": {
+      "description": "Mein persönliches Portfolio mit Fokus auf Performance, Accessibility und sauberem UI. Es nutzt Angular mit eigenen Animations-Directives (Reveal, Split Letters, Parallax) sowie i18n für DE/EN. Das responsive Layout ist in SCSS umgesetzt und skalierbar. Inhalte und Projekte sind klar strukturiert und leicht erweiterbar."
+    }
+  },
   "contact": {
     "title": "Kontaktiere mich",
     "lead": "Ermutige Menschen, dich zu kontaktieren und beschreibe, für welche Rolle du dich interessierst. Zeige Interesse, an einem neuen Projekt mitzuwirken.",
@@ -38,7 +52,6 @@
     "send": "Senden"
   },
   "footer": {
-    "subtitle": "Frontend-Entwickler",
     "legalNotice": "Impressum",
     "privacyPolicy": "Datenschutzerklärung"
   },

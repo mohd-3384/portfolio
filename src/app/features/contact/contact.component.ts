@@ -3,14 +3,18 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
+import { ToastService } from '../../core/services/toast.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink, TranslateModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, TranslateModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
+
 export class ContactComponent {
   private fb = inject(FormBuilder);
 
@@ -19,7 +23,8 @@ export class ContactComponent {
   errorMsg = '';
   myEmail = 'mohammed.abumustafa@hotmail.com';
   emailObfuscated = 'mohammed.abumustafa&#64;hotmail.com';
-
+  private toast = inject(ToastService);
+  private endpoint = 'https://yourdomain.de/sendMail.php';
   private readonly namePattern = /^(?:[A-Za-zÄÖÜäöüß]+(?:[ '\-][A-Za-zÄÖÜäöüß]+)*)$/;
 
   private emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -51,11 +56,9 @@ export class ContactComponent {
   get message() { return this.contactForm.controls.message; }
   get privacy() { return this.contactForm.controls.privacy; }
 
-
   scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
 
   async onSubmit() {
     this.errorMsg = '';
@@ -73,6 +76,8 @@ export class ContactComponent {
       await new Promise((res) => setTimeout(res, 1200));
 
       this.sent = true;
+      // Toast / Snackbar
+      // this.toast.success(`Danke! Deine Nachricht wurde gesendet.`);
       this.contactForm.reset({
         name: '',
         email: '',
@@ -81,8 +86,10 @@ export class ContactComponent {
       });
     } catch {
       this.errorMsg = 'Sending failed. Please try again.';
+      // this.toast.error(`Senden fehlgeschlagen.`);
     } finally {
       this.isSending = false;
+      // this.toast.error(`Server nicht erreichbar oder Fehler beim Senden.`);
     }
   }
 }

@@ -29,6 +29,20 @@
   "projects": {
     "title": "My Projects"
   },
+  "projectCard": {
+    "join": {
+      "description": "Join is a collaborative Kanban board for task management. Organize tasks via drag-and-drop, filter and search; comments and statuses support team workflows. Firebase provides authentication and real-time sync so changes are visible instantly. The responsive UI is designed for fast, clear interaction."
+    },
+    "el-pollo-loco": {
+      "description": "El Pollo Loco is a 2D side-scrolling browser platformer. Collect coins and salsa bottles, avoid enemies, stomp chickens, and defeat the final boss with bottle throws. Built in vanilla JavaScript with an OOP structure; animation loop, collision checks and sprite handling power smooth gameplay. Status bars show health, coins and bottles."
+    },
+    "pokedex": {
+      "description": "Pokédex is a web app that fetches Pokémon data from the PokeAPI. Search and filter Pokémon; cards show image, types and ID. A modal with tabs (Main, Stats, Evo Chain) provides details like height, weight, abilities and base stats. The UI is responsive and uses Bootstrap; “Load more” fetches additional entries."
+    },
+    "portfolio": {
+      "description": "My personal portfolio focused on performance, accessibility and a clean UI. Built with Angular, custom animation directives (Reveal, Split Letters, Parallax) and i18n (DE/EN). The responsive SCSS layout scales from mobile to desktop. Content and projects are structured and easy to extend."
+    }
+  },
   "contact": {
     "title": "Contact me",
     "lead": "Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.",
@@ -38,7 +52,6 @@
     "send": "Send"
   },
   "footer": {
-    "subtitle": "Frontend Developer",
     "legalNotice": "Legal Notice",
     "privacyPolicy": "Privacy Policy"
   },

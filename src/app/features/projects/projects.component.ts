@@ -15,36 +15,30 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ProjectsComponent {
   projects: ProjectItem[] = [
     {
-      title: 'Portfolio Website',
-      description: 'Angular, SCSS, responsive layout, i18n.',
-      image: '/assets/images/projects/portfolio-image.png',
-      tech: ['Angular', 'SCSS', 'i18n'],
-      github: 'https://github.com/mohd-3384/portfolio.git',
-      live: 'https://yourdomain.de',
-    },
-    {
-      title: 'REST API Dashboard',
-      description: 'Charts, filtering, auth, Material components.',
-      image: 'assets/images/projects/join.png',
-      tech: ['Angular', 'RxJS', 'Material'],
+      title: 'Join',
+      description:
+        'Join ist ein kollaboratives Kanban-Board für Aufgabenverwaltung. Aufgaben lassen sich per Drag-and-Drop organisieren, filtern und durchsuchen; Kommentare und Status helfen beim Team-Workflow. Firebase sorgt für Authentifizierung und Echtzeit-Synchronisierung, sodass Änderungen sofort auf allen Geräten sichtbar sind. Das responsive UI ist auf schnelle, klare Bedienung ausgelegt.',
+      image: '/assets/images/projects/join.png',
+      tech: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       github: 'https://github.com/mohd-3384/join.git',
-      live: 'https://dashboard.yourdomain.dev',
+      live: 'https://dashboard.yourdomain.dev'
     },
     {
-      title: 'Task Manager',
-      description: 'Kanban board with drag & drop and Firebase.',
-      image: 'assets/images/projects/my-tasks.png',
-      tech: ['Angular', 'Firebase', 'DnD'],
-      github: 'https://github.com/mohd-3384/myTasks.git',
-      live: 'https://mytasks-project.firebaseapp.com/',
-    },
-    {
-      title: 'Game',
-      description: 'Charts, filtering, auth, Material components.',
-      image: 'assets/images/projects/el-pollo-loco.png',
-      tech: ['JavaScript', 'RxJS', 'Material'],
+      title: 'El Pollo Loco',
+      description:
+        'El Pollo Loco ist ein 2D-Jump-and-Run-Browsergame. Du sammelst Coins und Salsa-Flaschen, weichst Gegnern aus, besiegst Chickens durch Sprünge und schließlich den Endboss mit Flaschenwürfen. Das Spiel ist in Vanilla JavaScript mit objektorientierter Struktur umgesetzt; Animation-Loop, Kollisionsabfragen und Sprite-Handling sorgen für flüssiges Gameplay. Das Interface ist responsiv und zeigt Health, Coins und Bottles in Statusleisten.',
+      image: '/assets/images/projects/el-pollo-loco.png',
+      tech: ['JavaScript', 'HTML', 'CSS'],
       github: 'https://github.com/mohd-3384/el-pollo-loco.git',
       live: 'https://dashboard.yourdomain.dev',
     },
+    {
+      title: "Pokédex",
+      description: "Pokédex ist eine Web-App, die Pokémon-Daten aus der PokeAPI lädt. Du kannst Pokémon durchsuchen und filtern; Karten zeigen Bild, Typen und ID. Ein Overlay mit Tabs (Main, Stats, Evo Chain) liefert Details wie Größe, Gewicht, Fähigkeiten und Werte. Das UI ist responsiv und mit Bootstrap umgesetzt; „Load more“ lädt weitere Einträge.",
+      image: "/assets/images/projects/pokedex.png",
+      tech: ["JavaScript", "HTML", "CSS", "Bootstrap", "PokeAPI"],
+      github: 'https://github.com/mohd-3384/pokedex.git',
+      live: 'https://dashboard.yourdomain.dev',
+    }
   ];
 }
