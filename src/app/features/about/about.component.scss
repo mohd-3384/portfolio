@@ -1,9 +1,9 @@
 .about__why {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: minmax(220px, 30%) 1fr;
+  gap: clamp(24px, 4vw, 40px);
+  align-items: stretch;
 
   @media (max-width: 992px) {
     margin-top: 0;
@@ -13,11 +13,16 @@
 }
 
 .about__why-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+
   img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     @media (max-width: 992px) {
       display: none;
@@ -26,12 +31,13 @@
 }
 
 .about__why-text {
-  justify-self: end;
+  justify-self: stretch;
   text-align: right;
-  max-width: 560px;
+  max-width: none;
 
   p {
     color: var(--greenColor);
+    text-align: justify;
   }
 
   @media (max-width: 992px) {
@@ -94,17 +100,18 @@
   }
 
   .arrow-to-remote {
-    width: clamp(16px, 2.6vw, 30px);
-    right: 50%;
+    right: 48%;
     top: 36%;
     transform: translateY(-8%) rotate(-8deg);
+    animation: blink 3s infinite;
   }
 
   .arrow-to-button {
-    width: clamp(18px, 2.6vw, 30px);
     right: 40%;
     top: 96%;
     transform: rotate(10deg);
+    animation: blink 3s infinite;
+    animation-delay: 1.5s;
   }
 
   @media (max-width: 992px) {
@@ -113,7 +120,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 56px;
+    margin-top: 16px;
 
     .arrow {
       display: none !important;
@@ -123,20 +130,39 @@
       margin-top: 0 !important;
     }
   }
+
+  @media (min-width: 1200px) {
+    max-width: 66%;
+    margin: auto;
+
+    .arrow-to-remote {
+      right: 53%;
+
+      @media (min-width: 1400px) {
+        right: 48%;
+      }
+    }
+  }
 }
 
 .talk {
-  margin-top: 26px !important;
-  margin-right: 180px !important;
+  margin-top: -8px !important;
+  margin-right: auto !important;
   transition: 0.3s !important;
 
-  @media (max-width: 992px) {
+  @media (min-width: 992px) {
     margin-top: 36px !important;
-    margin-right: -80px !important;
+    margin-right: 212px !important;
   }
 
-  @media (max-width: 992px) {
-    margin: 0 !important;
+  @media (min-width: 1200px) {
+    margin-top: 60px !important;
+    margin-right: 280px !important;
+  }
+
+  @media (min-width: 1400px) {
+    margin-top: 66px !important;
+    margin-right: 350px !important;
   }
 }
 
@@ -146,7 +172,7 @@
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
-  transition: background var(--transition125), color var(--transition125), border var(--transition125);
+  transition: all var(--transition125);
 
   &.border-none {
     border: none !important;

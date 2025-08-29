@@ -10,33 +10,47 @@ export class StaggerChildrenDirective implements AfterViewInit {
 
   constructor(private el: ElementRef<HTMLElement>) { }
 
+  /**
+ * Angular lifecycle hook: After the view has been initialized,
+ * applies staggered transition delays to child elements
+ * for reveal/animation effects.
+ *
+ * - Collects child elements matching the given selector.
+ * - Applies an increasing `transition-delay` based on index.
+ * - Cleans up the style once the transition ends.
+ */
   ngAfterViewInit() {
-    const host = this.el.nativeElement;
-
-    let list: HTMLElement[] = [];
-
-    try {
-      const nodeList = host.querySelectorAll<HTMLElement>(this.childSelector);
-      list = Array.prototype.slice.call(nodeList);
-    } catch {
-      if (this.childSelector.startsWith(':scope')) {
-        list = Array.prototype.slice.call(host.children) as HTMLElement[];
-      } else {
-        list = [];
-      }
-    }
-
+    const host = this.el.nativeElement as HTMLElement;
+    const list = this.collectChildElements(host, this.childSelector);
     if (!list.length) return;
+    this.applyStaggeredTransitions(list);
+  }
 
-    for (let i = 0; i < list.length; i++) {
-      const node = list[i];
+  /**
+   * Collects child elements using querySelectorAll or fallback logic.
+   * */
+  private collectChildElements(host: HTMLElement, selector: string): HTMLElement[] {
+    try {
+      return Array.from(host.querySelectorAll<HTMLElement>(selector));
+    } catch {
+      return selector.startsWith(':scope')
+        ? Array.from(host.children) as HTMLElement[]
+        : [];
+    }
+  }
+
+  /**
+   * Applies staggered transition delays to the provided elements.
+   *
+  */
+  private applyStaggeredTransitions(list: HTMLElement[]) {
+    list.forEach((node, i) => {
       node.style.transitionDelay = `${i * this.step}ms`;
-
       const clear = () => {
         node.style.transitionDelay = '';
         node.removeEventListener('transitionend', clear);
       };
       node.addEventListener('transitionend', clear);
-    }
+    });
   }
 }

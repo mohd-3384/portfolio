@@ -20,7 +20,7 @@ body {
       var(--bg-grey) 40%,
       var(--bg-black) 60%,
       var(--bg-black) 80%,
-      var(--bg-grey) 120%);
+      var(--bg-grey) 110%);
 }
 
 @media (min-width: 768px) and (max-width: 826px) {
@@ -46,6 +46,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Chrome / Edge / Safari */

@@ -28,6 +28,12 @@ export class ToastContainerComponent implements OnDestroy {
 
   constructor(private toast: ToastService) { }
 
+  /**
+ * Removes an item from the list by its ID.
+ * Also clears any active timeout associated with that item.
+ *
+ * @param {number} id - The unique identifier of the item to remove.
+ */
   remove(id: number) {
     const i = this.list.findIndex(x => x.id === id);
     if (i > -1) this.list.splice(i, 1);

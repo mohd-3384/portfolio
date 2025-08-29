@@ -15,6 +15,10 @@ export class PrivacyPolicyComponent {
 
   constructor(private router: Router) { }
 
+  /**
+ * Navigates back in browser history if available,
+ * otherwise redirects to the homepage (`'/'`).
+ */
   goBack() {
     if (window.history.length > 1) {
       window.history.back();
@@ -23,11 +27,21 @@ export class PrivacyPolicyComponent {
     }
   }
 
+  /**
+ * Returns an obfuscated version of the email address
+ * where `@` is replaced by `&#64;` to reduce spam harvesting.
+ *
+ * @returns {string} Obfuscated email string.
+ */
   get emailObfuscated() {
     const [name, domain] = this.email.split('@');
     return `${name}&#64;${domain}`;
   }
 
+  /**
+ * Formatted current date in a locale-sensitive string.
+ * Format example: "August 29, 2025".
+ */
   today = new Date().toLocaleDateString(undefined, {
     year: 'numeric',
     month: 'long',

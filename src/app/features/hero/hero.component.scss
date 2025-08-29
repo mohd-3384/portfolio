@@ -23,7 +23,6 @@
 }
 
 .hero {
-  // padding: clamp(48px, 8vw, 96px) 0 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +93,7 @@
   font-size: 24px;
 
   @media (min-width: 992px) and (max-width: 1399px) {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   @media (min-width: 1400px) {
@@ -108,7 +107,7 @@
   font-size: 40px;
 
   @media (min-width: 992px) and (max-width: 1399px) {
-    font-size: 60px;
+    font-size: 56px;
   }
 
   @media (min-width: 1400px) {
