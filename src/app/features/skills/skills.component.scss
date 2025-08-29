@@ -1,5 +1,5 @@
 .skills {
-  padding: clamp(48px, 8vw, 96px) 0;
+  padding-block: clamp(var(--section-pad-min), var(--section-pad-fluid), var(--section-pad-max));
   margin-top: 32px;
 
   .skills__title {

@@ -1,5 +1,6 @@
 .projects {
   margin-top: 32px;
+  padding-block: clamp(var(--section-pad-min), var(--section-pad-fluid), var(--section-pad-max));
 
   .projects__title {
     text-align: center;

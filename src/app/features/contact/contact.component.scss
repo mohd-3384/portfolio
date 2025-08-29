@@ -1,4 +1,6 @@
 .contact {
+  padding-block: clamp(var(--section-pad-min), var(--section-pad-fluid), var(--section-pad-max));
+
   .contact-title {
     display: flex;
     align-items: center;

@@ -10,6 +10,9 @@
   --redColor: #E15544;
   --greenColor: #009639;
   --transition125: 0.125s;
+  --section-pad-min: 24px;
+  --section-pad-fluid: 5vw;
+  --section-pad-max: 64px;
 }
 
 body {
@@ -60,6 +63,27 @@ main {
   100% {
     opacity: 1;
   }
+}
+
+:root {
+  --nav-h: 72px;
+}
+
+/* Höhe deines Headers */
+@media (max-width: 992px) {
+  :root {
+    --nav-h: 64px;
+  }
+}
+
+/* sorgt dafür, dass beim Scrollen per Anker/fragment nichts unter dem Header landet */
+section[id] {
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+
+/* optional, falls noch nicht gesetzt */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Chrome / Edge / Safari */

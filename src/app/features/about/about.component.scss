@@ -1,3 +1,7 @@
+.about {
+  padding-block: clamp(var(--section-pad-min), var(--section-pad-fluid), var(--section-pad-max));
+}
+
 .about__why {
   margin-top: 16px;
   display: grid;
@@ -43,6 +47,10 @@
   @media (max-width: 992px) {
     justify-self: center;
     text-align: center;
+
+    p {
+      text-align: center;
+    }
   }
 }
 
