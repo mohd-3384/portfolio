@@ -93,5 +93,12 @@
       "rights": "You have the right of access (Art. 15 GDPR), rectification (Art. 16 GDPR), erasure (Art. 17 GDPR), restriction (Art. 18 GDPR), data portability (Art. 20 GDPR), and to object (Art. 21 GDPR). Where processing is based on consent, you can withdraw it at any time with effect for the future (Art. 7(3) GDPR). You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR).",
       "changes": "I may update this privacy notice from time to time to reflect legal or technical changes. The current version is indicated below."
     }
+  },
+  "toast": {
+    "contact": {
+      "success": "Message sent — thank you!",
+      "error": "Send failed. Please try again later.",
+      "invalid": "Please check your inputs and accept the privacy policy."
+    }
   }
 }

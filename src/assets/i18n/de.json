@@ -93,5 +93,12 @@
       "rights": "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie Widerspruch (Art. 21 DSGVO). Soweit die Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Zudem haben Sie das Recht, Beschwerde bei einer Aufsichtsbehörde einzulegen (Art. 77 DSGVO).",
       "changes": "Ich kann diese Datenschutzerklärung von Zeit zu Zeit anpassen, um rechtliche oder technische Änderungen zu berücksichtigen. Die aktuelle Fassung ist unten angegeben."
     }
+  },
+  "toast": {
+    "contact": {
+      "success": "Nachricht gesendet – vielen Dank!",
+      "error": "Senden fehlgeschlagen. Bitte später erneut versuchen.",
+      "invalid": "Bitte prüfe die Eingaben und stimme der Datenschutzerklärung zu."
+    }
   }
 }

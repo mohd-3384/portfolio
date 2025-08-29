@@ -1,7 +1,6 @@
 .toast-wrap {
   position: fixed;
   inset: auto 16px 16px 16px;
-  /* unten zentriert auf Mobile */
   display: grid;
   gap: 8px;
   z-index: 9999;
@@ -24,9 +23,20 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
   display: grid;
   grid-template-columns: 6px 1fr;
+  gap: 12px;
   align-items: center;
   overflow: hidden;
   animation: slideIn .25s ease-out;
+}
+
+// success
+.toast.s {
+  box-shadow: 0 0 16px var(--greenColor);
+}
+
+// error
+.toast.e {
+  box-shadow: 0 0 16px var(--redColor);
 }
 
 .toast__bar {
@@ -36,23 +46,17 @@
 }
 
 .toast__bar.s {
-  background: #10b981;
+  background: var(--greenColor);
 }
 
-/* success */
 .toast__bar.e {
-  background: #ef4444;
-}
-
-/* error   */
-.toast__msg {
-  padding-left: 10px;
+  background: var(--redColor);
 }
 
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(8px)
+    transform: translateY(12px)
   }
 
   to {

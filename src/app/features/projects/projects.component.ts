@@ -21,7 +21,7 @@ export class ProjectsComponent {
       image: '/assets/images/projects/join.png',
       tech: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       github: 'https://github.com/mohd-3384/join.git',
-      live: 'https://dashboard.yourdomain.dev'
+      live: 'https://join.mohammed-abumustafa.de'
     },
     {
       title: 'El Pollo Loco',
@@ -30,7 +30,7 @@ export class ProjectsComponent {
       image: '/assets/images/projects/el-pollo-loco.png',
       tech: ['JavaScript', 'HTML', 'CSS'],
       github: 'https://github.com/mohd-3384/el-pollo-loco.git',
-      live: 'https://dashboard.yourdomain.dev',
+      live: 'https://el-pollo-loco.mohammed-abumustafa.de',
     },
     {
       title: "Pokédex",
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       image: "/assets/images/projects/pokedex.png",
       tech: ["JavaScript", "HTML", "CSS", "Bootstrap", "PokeAPI"],
       github: 'https://github.com/mohd-3384/pokedex.git',
-      live: 'https://dashboard.yourdomain.dev',
+      live: 'https://pokedex.mohammed-abumustafa.de',
     }
   ];
 }

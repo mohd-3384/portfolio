@@ -1,47 +1,53 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { Subscription, timer } from 'rxjs';
 import { Toast, ToastService } from '../../../core/services/toast.service';
 
+type ToastView = Toast & { fading?: boolean };
 
 @Component({
   selector: 'app-toast-container',
   standalone: true,
-  imports: [CommonModule],
-  template: `
-    <div class="toast-wrap" role="status" aria-live="polite">
-      <div class="toast" *ngFor="let t of list">
-        <div class="toast__bar" [class.s]="t.type==='success'" [class.e]="t.type==='error'"></div>
-        <span class="toast__msg">{{ t.message }}</span>
-      </div>
-    </div>
-  `,
-  styleUrls: ['./toast-container.component.scss']
+  imports: [CommonModule, TranslateModule],
+  templateUrl: './toast-container.component.html',
+  styleUrls: ['./toast-container.component.scss'],
 })
-export class ToastContainerComponent implements OnDestroy {
-  list: Toast[] = [];
-  private timers = new Map<number, any>();
-  private sub = this.toast.toasts$.subscribe(t => {
-    this.list.push(t);
-    const h = setTimeout(() => this.remove(t.id), t.duration);
-    this.timers.set(t.id, h);
-  });
+export class ToastContainerComponent implements OnInit, OnDestroy {
+  toasts: ToastView[] = [];
+  private sub?: Subscription;
 
-  constructor(private toast: ToastService) { }
+  constructor(private toastSvc: ToastService) { }
 
   /**
- * Removes an item from the list by its ID.
- * Also clears any active timeout associated with that item.
+ * Angular lifecycle hook: Initializes the component.
  *
- * @param {number} id - The unique identifier of the item to remove.
+ * - Subscribes to the toast service stream.
+ * - Pushes incoming toasts into the local list for rendering.
+ * - Each toast automatically fades out after its duration
+ *   (default: 3500ms) and is removed from the list after
+ *   an additional short fade-out delay (200ms).
  */
-  remove(id: number) {
-    const i = this.list.findIndex(x => x.id === id);
-    if (i > -1) this.list.splice(i, 1);
-    const h = this.timers.get(id); if (h) clearTimeout(h);
+  ngOnInit(): void {
+    this.sub = this.toastSvc.stream$.subscribe(t => {
+      const item: ToastView = { ...t };
+      this.toasts.push(item);
+
+      const ttl = t.durationMs ?? 3500;
+      timer(ttl).subscribe(() => {
+        item.fading = true;
+        timer(200).subscribe(() => {
+          this.toasts = this.toasts.filter(x => x !== item);
+        });
+      });
+    });
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-    this.timers.forEach(clearTimeout);
+  /**
+ * Angular lifecycle hook: Cleans up resources when the component is destroyed.
+ * Unsubscribes from the toast service stream to prevent memory leaks.
+ */
+  ngOnDestroy(): void {
+    this.sub?.unsubscribe();
   }
 }
