@@ -106,7 +106,7 @@
   cursor: pointer;
 
   .back-icon {
-    transition: filter 0.3s ease;
+    transition: filter var(--transition125) ease;
   }
 
   &:hover,

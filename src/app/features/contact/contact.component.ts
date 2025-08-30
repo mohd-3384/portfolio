@@ -23,8 +23,8 @@ export class ContactComponent {
   sent = false;
   errorMsg = '';
 
-  myEmail = 'kontakt@mohammed-abumustafa.de';
-  emailObfuscated = 'kontakt&#64;mohammed-abumustafa.de';
+  myEmail = 'contact@mohammed-abumustafa.de';
+  emailObfuscated = 'contact&#64;mohammed-abumustafa.de';
 
   private readonly namePattern =
     /^(?:[A-Za-zÄÖÜäöüß]+(?:[ '\-][A-Za-zÄÖÜäöüß]+)*)$/;

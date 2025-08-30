@@ -81,7 +81,7 @@
     color: var(--redColor);
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.15s ease;
+    transition: color var(--transition125) ease;
 
     &:hover {
       color: var(--greenColor);

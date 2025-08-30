@@ -156,7 +156,7 @@
 .talk {
   margin-top: -8px !important;
   margin-right: auto !important;
-  transition: 0.3s !important;
+  transition: var(--transition125) !important;
 
   @media (min-width: 992px) {
     margin-top: 36px !important;
@@ -232,13 +232,13 @@
   align-items: center;
   justify-content: center;
   height: 42px !important;
-  transition: 1s ease;
+  transition: var(--transition125) ease;
 }
 
 .locate-img {
   width: 28px !important;
   height: 32px !important;
-  transition: content 0.3s ease;
+  transition: content var(--transition125) ease;
 
   &:hover {
     content: url('/assets/images/locate_.png');

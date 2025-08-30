@@ -38,7 +38,7 @@ header.navbar {
 .desktop-buttons a {
   color: var(--redColor);
   text-decoration: none;
-  transition: color .1s;
+  transition: color var(--transition125);
   font-size: 22px;
   font-weight: 500;
   cursor: pointer;
@@ -73,7 +73,7 @@ header.navbar {
     height: 2px;
     border-radius: 2px;
     background: var(--redColor);
-    transition: transform .25s ease, opacity .2s ease;
+    transition: transform var(--transition125) ease, opacityvar(--transition125) ease;
 
     &:nth-child(1) {
       top: 4px;
@@ -126,7 +126,7 @@ header.navbar {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: .5px;
-    transition: color .1s;
+    transition: color var(--transition125);
 
     &:hover {
       color: var(--greenColor);

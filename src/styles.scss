@@ -69,19 +69,16 @@ main {
   --nav-h: 72px;
 }
 
-/* Höhe deines Headers */
 @media (max-width: 992px) {
   :root {
     --nav-h: 64px;
   }
 }
 
-/* sorgt dafür, dass beim Scrollen per Anker/fragment nichts unter dem Header landet */
 section[id] {
   scroll-margin-top: calc(var(--nav-h) + 16px);
 }
 
-/* optional, falls noch nicht gesetzt */
 html {
   scroll-behavior: smooth;
 }
@@ -93,11 +90,9 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  /* Text-/Caret-Color */
   -webkit-text-fill-color: var(--greenColor);
   caret-color: var(--greenColor);
 
-  /* delete white background */
   -webkit-box-shadow: 0 0 0 1000px transparent inset;
   box-shadow: 0 0 0 1000px transparent inset;
 

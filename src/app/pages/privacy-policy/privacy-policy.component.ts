@@ -10,7 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-  email = 'mohammed.abumustafa@hotmail.com';
+  email = 'contact@mohammed-abumustafa.de';
   tel = '0176 631 248 96'
 
   constructor(private router: Router) { }

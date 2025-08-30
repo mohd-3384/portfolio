@@ -130,7 +130,7 @@
     color: inherit;
     border-radius: 4px;
     outline: none;
-    transition: border-color .15s ease;
+    transition: border-color var(--transition125) ease;
   }
 
   textarea {
@@ -216,7 +216,7 @@
         border-bottom: 2px solid var(--redColor);
         transform: translate(-50%, -55%) rotate(45deg);
         opacity: 0;
-        transition: opacity .12s ease;
+        transition: opacity var(--transition125) ease;
       }
     }
 
@@ -251,7 +251,7 @@
     cursor: pointer;
     border: 2px solid var(--greenColor);
     border-radius: 8px !important;
-    transition: color 0.125s ease;
+    transition: color var(--transition125) ease;
     font-weight: 600;
 
     &:disabled {
