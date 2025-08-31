@@ -65,7 +65,7 @@ export class SplitLettersDirective implements AfterViewInit {
     span.className = 'char';
     span.textContent = ch;
     span.style.setProperty('--i', String(i));
-    span.style.color = 'var(--greenColor)';
+    span.style.color = 'var(--redColor)';
     return span;
   }
 }
