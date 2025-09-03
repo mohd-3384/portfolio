@@ -14,7 +14,7 @@ import { filter, first } from 'rxjs/operators';
 export class HeaderComponent {
   isMenuOpen = false;
   private t = inject(TranslateService);
-  cur = this.t.currentLang || 'de';
+  cur: 'de' | 'en' = 'de';
   constructor(private router: Router) { }
 
   /**
@@ -74,6 +74,7 @@ export class HeaderComponent {
     const browser = (typeof navigator !== 'undefined' && navigator.language.slice(0, 2)) || 'de';
     const active = (saved === 'de' || saved === 'en') ? saved : (browser === 'en' ? 'en' : 'de');
     this.t.use(active);
+    this.cur = active;
   }
 
   /**

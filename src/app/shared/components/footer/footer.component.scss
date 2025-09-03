@@ -24,6 +24,14 @@
 }
 
 /* Left */
+.footer__left {
+  width: fit-content;
+
+  .logo {
+    margin: auto;
+  }
+}
+
 .logo {
   font-size: 2rem;
   font-family: 'Press Start 2P', monospace;

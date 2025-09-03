@@ -189,3 +189,37 @@
   animation: char-to-green 0.6s ease forwards;
   animation-delay: calc(var(--i) * 45ms);
 }
+
+/* ===============================
+    Hero Image Animation
+  =============================== */
+.hero__image.reveal-scale-start {
+  opacity: 0;
+  scale: 0.001;
+  ;
+}
+
+.hero__image.reveal-scale-in {
+  opacity: 1 !important;
+  scale: 1 !important;
+  transition: all 0.5s ease !important;
+}
+
+/* Animation sitzt am IMG */
+// .hero__image img {
+//   transition: opacity 0.3s ease, transform 0.3s ease;
+//   transform-origin: center;
+//   backface-visibility: hidden;
+// }
+
+/* Startzustand (unsichtbar + klein) */
+// .hero__image.reveal-scale-start img {
+// opacity: 0;
+// transform: scale(0.001);
+// }
+
+/* Zielzustand */
+// .hero__image.reveal-scale-in img {
+// opacity: 1;
+// transform: scale(1);
+// }
