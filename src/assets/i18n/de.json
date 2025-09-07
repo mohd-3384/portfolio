@@ -14,7 +14,7 @@
   },
   "about": {
     "title": "Warum ich",
-    "intro": "Ich bin ein leidenschaftlicher Frontend-Entwickler, der an der Schnittstelle von Design und Technologie aufblüht. Für mich bedeutet Coden mehr als nur Zeilen Code zu schreiben – es geht darum, intuitive, ansprechende und visuell überzeugende digitale Erlebnisse zu gestalten, die Ideen zum Leben erwecken.",
+    "intro": "Ich bin ein leidenschaftlicher Frontend-Entwickler, der an der Schnittstelle von Design und Technologie aufblüht. Für mich bedeutet Coden mehr, als nur Zeilen Code zu schreiben – es geht darum, intuitive, ansprechende und visuell überzeugende digitale Erlebnisse zu gestalten, die Ideen zum Leben erwecken.",
     "iam": "Ich bin",
     "location": "ansässig in Wuppertal",
     "remote": "offen für Remote-Arbeit",
@@ -34,7 +34,7 @@
       "description": "Join ist ein kollaboratives Kanban-Board für Aufgabenverwaltung. Aufgaben lassen sich per Drag-and-Drop organisieren, filtern und durchsuchen; Kommentare und Status unterstützen den Team-Workflow. Firebase übernimmt Authentifizierung und Echtzeit-Synchronisierung, sodass Änderungen sofort sichtbar sind. Das responsive UI ist auf schnelle, klare Bedienung ausgelegt."
     },
     "el-pollo-loco": {
-      "description": "El Pollo Loco ist ein 2D-Jump-and-Run-Browsergame. Sammle Coins und Salsa-Flaschen, weiche Gegnern aus, besiege Chickens durch Sprünge und den Endboss mit Flaschenwürfen. Umgesetzt in Vanilla JavaScript mit OOP-Struktur; Animations-Loop, Kollisionsabfragen und Sprite-Handling sorgen für flüssiges Gameplay. Statusleisten zeigen Health, Coins und Bottles."
+      "description": "El Pollo Loco ist ein 2D-Jump-and-Run-Browsergame. Sammle Coins und Salsa-Flaschen, weiche Gegner aus, besiege Chickens durch Sprünge und den Endboss mit Flaschenwürfen. Umgesetzt in Vanilla-JavaScript mit OOP-Struktur; Animations-Loop, Kollisionsabfragen und Sprite-Handling sorgen für flüssiges Gameplay. Statusleisten zeigen Health, Coins und Bottles."
     },
     "pokedex": {
       "description": "Pokédex ist eine Web-App, die Pokémon-Daten aus der PokeAPI lädt. Du kannst Pokémon suchen und filtern; Karten zeigen Bild, Typen und ID. Ein Overlay mit Tabs (Main, Stats, Evo Chain) liefert Details wie Größe, Gewicht, Fähigkeiten und Werte. Das UI ist responsiv und mit Bootstrap umgesetzt; „Load more“ lädt weitere Einträge."
