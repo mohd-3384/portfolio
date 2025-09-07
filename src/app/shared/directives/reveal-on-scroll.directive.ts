@@ -33,7 +33,6 @@ export class RevealOnScrollDirective implements OnInit, OnDestroy {
   ngOnInit() {
     const node = this.el.nativeElement as HTMLElement;
     if (!this.canUseIntersectionObserver()) {
-      this.showImmediately(node);
       return;
     }
     this.prepareReveal(node);
@@ -45,13 +44,6 @@ export class RevealOnScrollDirective implements OnInit, OnDestroy {
    * */
   private canUseIntersectionObserver(): boolean {
     return typeof window !== 'undefined' && 'IntersectionObserver' in window;
-  }
-
-  /**
-   * Applies the final reveal state immediately (SSR or no IO support).
-   * */
-  private showImmediately(node: HTMLElement): void {
-    this.r.addClass(node, this.revealClass);
   }
 
   /**

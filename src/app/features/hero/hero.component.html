@@ -2,22 +2,22 @@
   <div class="container">
     <div class="hero__wrap">
 
-      <a href="#contact" class="hero__contact-btn" revealOnScroll>
+      <a href="#contact" class="hero__contact-btn reveal-start" revealOnScroll>
         {{ 'hero.contactBtn' | translate }}
       </a>
 
-      <div class="hero__text" revealOnScroll [revealStartClass]="'reveal-fade-start'" [revealClass]="'reveal-fade-in'"
-        [durationMs]="1200" [initialInViewDelayMs]="300">
+      <div class="hero__text reveal-fade-start" revealOnScroll [revealStartClass]="'reveal-fade-start'"
+        [revealClass]="'reveal-fade-in'" [durationMs]="1200" [initialInViewDelayMs]="300">
         <h1 class="hero__role" splitLetters>Frontend Developer</h1>
         <h2 class="hero__name" splitLetters>Mohammed Abumustafa</h2>
       </div>
 
-      <div class="hero__image" revealOnScroll [revealStartClass]="'reveal-scale-start'"
+      <div class="hero__image reveal-scale-start" revealOnScroll [revealStartClass]="'reveal-scale-start'"
         [revealClass]="'reveal-scale-in'" [durationMs]="1500" [initialInViewDelayMs]="500">
-        <img src="/assets/images/pic/me.png" alt="Mohammed Abumustafa" />
+        <img src="/assets/images/pic/me_hero.png" alt="Mohammed Abumustafa" />
       </div>
 
-      <a href="#about" class="hero__scroll-btn" revealOnScroll>
+      <a href="#about" class="hero__scroll-btn reveal-start" revealOnScroll>
         <img src="/assets/images/arrow_down_red.png" alt="Scroll down" />
       </a>
 
