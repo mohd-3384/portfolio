@@ -178,7 +178,7 @@
 =============================== */
 .hero__text.reveal-fade-in .char,
 .hero__text.reveal-scale-in .char {
-  animation: char-to-green 1.5s ease forwards;
+  animation: char-to-green var(--char-anim-duration, 1.5s) ease forwards;
   animation-delay: calc(280ms + var(--i) * 55ms);
 }
 

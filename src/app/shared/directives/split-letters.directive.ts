@@ -1,10 +1,13 @@
 import {
-  AfterViewInit, Directive, ElementRef, Inject, PLATFORM_ID
+  AfterViewInit, Directive, ElementRef, Inject, Input, PLATFORM_ID
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 @Directive({ selector: '[splitLetters]', standalone: true })
 export class SplitLettersDirective implements AfterViewInit {
+
+  @Input() durationMs: number = 1500;
+
   constructor(
     private el: ElementRef<HTMLElement>,
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -22,6 +25,7 @@ export class SplitLettersDirective implements AfterViewInit {
    */
   ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
+    this.el.nativeElement.style.setProperty('--char-anim-duration', `${this.durationMs}ms`);
     const textNodes = this.collectTextNodes(this.el.nativeElement);
     this.replaceTextNodesWithSpans(textNodes);
   }
