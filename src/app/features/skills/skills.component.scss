@@ -3,7 +3,7 @@
   margin-top: 32px;
 
   .skills__title {
-    font-size: clamp(40px, 6vw, 60px);
+    font-size: clamp(32px, 6vw, 54px);
     font-weight: 800;
     margin-bottom: 48px;
     color: var(--redColor);
@@ -55,6 +55,7 @@
 
   .skill__name {
     font-weight: 600;
+    font-size: 18px;
     color: var(--greenColor);
     transition: all var(--transition125) ease-out;
   }

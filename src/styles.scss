@@ -26,6 +26,13 @@ body {
       var(--bg-grey) 110%);
 }
 
+@media (min-width: 1450px) {
+  .container {
+    max-width: 1440px !important;
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 826px) {
   .container {
     max-width: 646px !important;

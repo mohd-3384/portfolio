@@ -41,7 +41,7 @@
         <div class="left-stack">
           <!-- Name -->
           <div class="form-group" [class.typing]="typing.name"
-            [ngClass]="{ invalid: name.invalid && name.dirty, valid: name.valid && name.dirty }">
+            [ngClass]="{ invalid: name.invalid && name.touched, valid: name.valid && name.touched }">
             <input type="text" placeholder="Your Name" formControlName="name" autocomplete="name" inputmode="text"
               pattern="(?:[A-Za-zÄÖÜäöüß]+(?:[ '\-][A-Za-zÄÖÜäöüß]+)*)" (input)="setTyping('name', true)"
               (blur)="setTyping('name', false)" [attr.aria-invalid]="name.invalid && name.touched"
@@ -53,17 +53,17 @@
             </div>
             }
 
-            @if (name.invalid && name.dirty) {
+            @if (name.invalid && name.touched) {
             <img src="/assets/images/input_red.png" class="status-icon" alt="invalid" />
             }
-            @if (name.valid && name.dirty) {
+            @if (name.valid && name.touched) {
             <img src="/assets/images/input_green.png" class="status-icon" alt="valid" />
             }
           </div>
 
           <!-- Email -->
           <div class="form-group" [class.typing]="typing.email"
-            [ngClass]="{ invalid: email.invalid && email.dirty, valid: email.valid && email.dirty }">
+            [ngClass]="{ invalid: email.invalid && email.touched, valid: email.valid && email.touched }">
             <input type="email" placeholder="Your Email" formControlName="email" autocomplete="email"
               (input)="setTyping('email', true)" (blur)="setTyping('email', false)"
               [attr.aria-invalid]="email.invalid && email.touched"
@@ -75,10 +75,10 @@
             </div>
             }
 
-            @if (email.invalid && email.dirty) {
+            @if (email.invalid && email.touched) {
             <img src="/assets/images/input_red.png" class="status-icon" alt="invalid" />
             }
-            @if (email.valid && email.dirty) {
+            @if (email.valid && email.touched) {
             <img src="/assets/images/input_green.png" class="status-icon" alt="valid" />
             }
           </div>
@@ -86,7 +86,7 @@
 
         <!-- Message -->
         <div class="form-group message-group" [class.typing]="typing.message"
-          [ngClass]="{ invalid: message.invalid && message.dirty, valid: message.valid && message.dirty }">
+          [ngClass]="{ invalid: message.invalid && message.touched, valid: message.valid && message.touched }">
           <textarea placeholder="Your Message" formControlName="message" (input)="setTyping('message', true)"
             (blur)="setTyping('message', false)" [attr.aria-invalid]="message.invalid && message.touched"
             [attr.aria-describedby]="isHintVisible('message') ? 'message_err' : null"></textarea>
@@ -97,10 +97,10 @@
           </div>
           }
 
-          @if (message.invalid && message.dirty) {
+          @if (message.invalid && message.touched) {
           <img src="/assets/images/input_red.png" class="status-icon" alt="invalid" />
           }
-          @if (message.valid && message.dirty) {
+          @if (message.valid && message.touched) {
           <img src="/assets/images/input_green.png" class="status-icon" alt="valid" />
           }
         </div>

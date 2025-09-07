@@ -55,7 +55,7 @@
 }
 
 .about__why-title {
-  font-size: clamp(40px, 6vw, 60px);
+  font-size: clamp(32px, 6vw, 54px);
   margin: 0 0 14px 0;
   font-weight: 800;
 }
@@ -90,7 +90,8 @@
     gap: 10px;
 
     span {
-      font-weight: 600;
+      // font-weight: 600;
+      font-size: 18px;
       color: var(--greenColor);
     }
 
