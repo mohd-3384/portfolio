@@ -49,7 +49,26 @@
     "consentPrefix": "I've read the",
     "consentLink": "privacy policy",
     "consentSuffix": "and agree to the processing of my data as outlined.",
-    "send": "Send"
+    "send": "Send",
+    "errors": {
+      "name": {
+        "required": "Please enter your name.",
+        "minlength": "Name must be at least {{required}} characters (currently {{actual}}).",
+        "pattern": "Please enter a valid name."
+      },
+      "email": {
+        "required": "Please enter your email address.",
+        "pattern": "Please enter a valid email address."
+      },
+      "message": {
+        "required": "Please enter a message.",
+        "minlength": "Message must be at least {{required}} characters (currently {{actual}})."
+      },
+      "privacy": {
+        "required": "Please accept the privacy policy."
+      },
+      "generic": "Please check your input."
+    }
   },
   "footer": {
     "legalNotice": "Legal Notice",

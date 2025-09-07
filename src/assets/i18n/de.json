@@ -49,7 +49,26 @@
     "consentPrefix": "Ich habe die",
     "consentLink": "Datenschutzerklärung",
     "consentSuffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-    "send": "Senden"
+    "send": "Senden",
+    "errors": {
+      "name": {
+        "required": "Bitte gib deinen Namen ein.",
+        "minlength": "Name muss mindestens {{required}} Buchstaben haben (aktuell {{actual}}).",
+        "pattern": "Bitte gib einen gültigen Namen ein."
+      },
+      "email": {
+        "required": "Bitte gib deine E-Mail-Adresse ein.",
+        "pattern": "Bitte gib eine gültige E-Mail-Adresse ein."
+      },
+      "message": {
+        "required": "Bitte gib eine Nachricht ein.",
+        "minlength": "Nachricht muss mindestens {{required}} Zeichen enthalten (aktuell {{actual}})."
+      },
+      "privacy": {
+        "required": "Bitte stimme der Datenschutzerklärung zu."
+      },
+      "generic": "Bitte Eingabe prüfen."
+    }
   },
   "footer": {
     "legalNotice": "Impressum",
