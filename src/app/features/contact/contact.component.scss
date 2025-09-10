@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: clamp(32px, 6vw, 54px);
+    font-size: clamp(40px, 6vw, 60px);
 
     .arrow-title {
       transform: translateY(16px);
@@ -33,6 +33,7 @@
     font-size: clamp(16px, 2.5vw, 18px);
     margin: 0 0 8px;
     color: var(--greenColor);
+    line-height: 1.25;
   }
 }
 

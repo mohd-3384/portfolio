@@ -42,6 +42,10 @@
   p {
     color: var(--greenColor);
     text-align: justify;
+
+    @media (min-width: 1200px) {
+      margin-bottom: 80px;
+    }
   }
 
   @media (max-width: 992px) {
@@ -55,7 +59,7 @@
 }
 
 .about__why-title {
-  font-size: clamp(32px, 6vw, 54px);
+  font-size: clamp(40px, 6vw, 60px);
   margin: 0 0 14px 0;
   font-weight: 800;
 }
