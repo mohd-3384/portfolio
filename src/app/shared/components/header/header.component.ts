@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, inject, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { filter, first } from 'rxjs/operators';
@@ -15,7 +16,10 @@ export class HeaderComponent {
   isMenuOpen = false;
   private t = inject(TranslateService);
   cur: 'de' | 'en' = 'de';
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
 
   /**
  * Scrolls smoothly to the top of the page.
@@ -86,8 +90,12 @@ export class HeaderComponent {
   set(lang: 'de' | 'en', ev?: Event) {
     if (ev) ev.preventDefault();
     this.t.use(lang);
-    this.cur = lang;
-    localStorage.setItem('lang', lang);
-  }
+    (this as any).cur = lang;
 
+    if (isPlatformBrowser(this.platformId) && typeof localStorage !== 'undefined') {
+      try {
+        localStorage.setItem('lang', lang);
+      } catch { }
+    }
+  }
 }

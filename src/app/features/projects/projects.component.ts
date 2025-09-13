@@ -24,6 +24,14 @@ export class ProjectsComponent {
       live: 'https://join.mohammed-abumustafa.de'
     },
     {
+      "title": "Tasks",
+      "description": "Tasks ist eine React-basierte To-Do-App mit Firebase-Backend. Nutzer melden sich per Firebase Authentication an und verwalten Aufgaben in Echtzeit über Firestore. Aufgaben lassen sich anlegen, bearbeiten, löschen und nach Status filtern; Sortierungen wie „Neueste zuerst“ / „Älteste zuerst“ sowie eine einfache Suche sorgen für Übersicht. Ein aufgeräumtes, responsives UI mit Kartenlayout (Font Awesome Icons) und geschützten Routen (React Router) macht die Bedienung auf Desktop und Mobile angenehm.",
+      "image": "/assets/images/projects/tasks.png",
+      "tech": ["React", "JavaScript", "CSS", "Firebase", "Firestore", "React Router"],
+      "github": "https://github.com/mohd-3384/myTasks",
+      "live": "https://tasks.mohammed-abumustafa.de"
+    },
+    {
       title: 'El Pollo Loco',
       description:
         'El Pollo Loco ist ein 2D-Jump-and-Run-Browsergame. Du sammelst Coins und Salsa-Flaschen, weichst Gegnern aus, besiegst Chickens durch Sprünge und schließlich den Endboss mit Flaschenwürfen. Das Spiel ist in Vanilla JavaScript mit objektorientierter Struktur umgesetzt; Animation-Loop, Kollisionsabfragen und Sprite-Handling sorgen für flüssiges Gameplay. Das Interface ist responsiv und zeigt Health, Coins und Bottles in Statusleisten.',

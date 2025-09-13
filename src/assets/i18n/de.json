@@ -41,6 +41,9 @@
     },
     "portfolio": {
       "description": "Mein persönliches Portfolio mit Fokus auf Performance, Accessibility und sauberem UI. Es nutzt Angular mit eigenen Animations-Directives (Reveal, Split Letters, Parallax) sowie i18n für DE/EN. Das responsive Layout ist in SCSS umgesetzt und skalierbar. Inhalte und Projekte sind klar strukturiert und leicht erweiterbar."
+    },
+    "tasks": {
+      "description": "Tasks ist eine React-basierte To-Do-App mit Firebase-Backend. Nutzer melden sich per Firebase Authentication an und verwalten Aufgaben in Echtzeit über Firestore. Aufgaben lassen sich anlegen, bearbeiten, löschen und nach Status filtern; Sortierungen wie „Neueste zuerst“ / „Älteste zuerst“ sowie eine Suche sorgen für Übersicht. Das aufgeräumte UI mit Kartenlayout ist responsiv und angenehm bedienbar."
     }
   },
   "contact": {
