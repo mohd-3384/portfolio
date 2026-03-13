@@ -27,7 +27,8 @@
     "challengeText": "I am always happy to learn new technologies,<br />just tell me what you need."
   },
   "projects": {
-    "title": "My Projects"
+    "title": "My Projects",
+    "showMore": "Show all projects"
   },
   "projectCard": {
     "join": {
@@ -44,6 +45,9 @@
     },
     "tasks": {
       "description": "Tasks is a React-based to-do app with a Firebase backend. Users log in via Firebase Authentication and manage tasks in real-time with Firestore. Tasks can be created, edited, deleted, and filtered by status; sorting options like “Newest first” / “Oldest first” as well as a search function provide clarity. The clean card-based UI is responsive and easy to use."
+    },
+    "dabubble": {
+      "description": "DaBubble is a real-time chat app with channels, direct messages, and threads. User management includes profile and avatar editing, search, mention support, and role/member permissions. Firebase provides authentication and live synchronization of messages."
     }
   },
   "contact": {

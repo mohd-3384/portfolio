@@ -32,6 +32,15 @@ export class ProjectsComponent {
       "live": "https://tasks.mohammed-abumustafa.de"
     },
     {
+      title: 'DaBubble',
+      description:
+        'Echtzeit-Chat-App mit Channels, Direktnachrichten und Threads. Nutzerverwaltung inkl. Profil- und Avatar-Bearbeitung, Suche, Mention-Support sowie Rollen- und Member-Berechtigungen. Firebase übernimmt Authentifizierung und Live-Synchronisierung der Nachrichten.',
+      image: '/assets/images/projects/dabubble.png',
+      tech: ['Angular', 'TypeScript', 'SCSS', 'Firebase', 'RxJS'],
+      github: 'https://github.com/mohd-3384/DaBubble',
+      live: 'https://dabubble.mohammed-abumustafa.de/'
+    },
+    {
       title: 'El Pollo Loco',
       description:
         'El Pollo Loco ist ein 2D-Jump-and-Run-Browsergame. Du sammelst Coins und Salsa-Flaschen, weichst Gegnern aus, besiegst Chickens durch Sprünge und schließlich den Endboss mit Flaschenwürfen. Das Spiel ist in Vanilla JavaScript mit objektorientierter Struktur umgesetzt; Animation-Loop, Kollisionsabfragen und Sprite-Handling sorgen für flüssiges Gameplay. Das Interface ist responsiv und zeigt Health, Coins und Bottles in Statusleisten.',
@@ -49,4 +58,5 @@ export class ProjectsComponent {
       live: 'https://pokedex.mohammed-abumustafa.de',
     }
   ];
+
 }
