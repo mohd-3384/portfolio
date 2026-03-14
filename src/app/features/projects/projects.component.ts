@@ -32,6 +32,15 @@ export class ProjectsComponent {
       "live": "https://tasks.mohammed-abumustafa.de"
     },
     {
+      title: 'Memory',
+      description:
+        'Memory ist ein modernes Karten-Matching-Spiel mit lokalem 1-Spieler- und 2-Spieler-Modus sowie Online-Multiplayer über Room-Codes. Das Spiel bietet Theme-Auswahl, variable Board-Größen, Soundeffekte, Rematch-Flow, Reconnect-Logik und ein responsives UI mit DE/EN-Sprachumschaltung.',
+      image: '/assets/images/projects/memory.png',
+      tech: ['React', 'TypeScript', 'SCSS', 'Socket.IO', 'Node.js', 'Vite'],
+      github: 'https://github.com/mohd-3384/Memory-Game',
+      live: 'https://memory.mohammed-abumustafa.de/'
+    },
+    {
       title: 'DaBubble',
       description:
         'Echtzeit-Chat-App mit Channels, Direktnachrichten und Threads. Nutzerverwaltung inkl. Profil- und Avatar-Bearbeitung, Suche, Mention-Support sowie Rollen- und Member-Berechtigungen. Firebase übernimmt Authentifizierung und Live-Synchronisierung der Nachrichten.',

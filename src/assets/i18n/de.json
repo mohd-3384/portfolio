@@ -46,6 +46,9 @@
     "tasks": {
       "description": "Tasks ist eine React-basierte To-Do-App mit Firebase-Backend. Nutzer melden sich per Firebase Authentication an und verwalten Aufgaben in Echtzeit über Firestore. Aufgaben lassen sich anlegen, bearbeiten, löschen und nach Status filtern; Sortierungen wie „Neueste zuerst“ / „Älteste zuerst“ sowie eine Suche sorgen für Übersicht. Das aufgeräumte UI mit Kartenlayout ist responsiv und angenehm bedienbar."
     },
+    "memory": {
+      "description": "Memory ist ein modernes Karten-Matching-Spiel mit lokalem 1-Spieler- und 2-Spieler-Modus sowie Online-Multiplayer über Room-Codes. Das Spiel bietet Theme-Auswahl, variable Board-Größen, Soundeffekte, Rematch-Flow, Reconnect-Logik und ein responsives UI mit DE/EN-Sprachumschaltung."
+    },
     "dabubble": {
       "description": "DaBubble ist eine Echtzeit-Chat-App mit Channels, Direktnachrichten und Threads. Die Nutzerverwaltung umfasst Profil- und Avatar-Bearbeitung, Suche, Mention-Support sowie Rollen- und Member-Berechtigungen. Firebase übernimmt Authentifizierung und Live-Synchronisierung der Nachrichten."
     }
