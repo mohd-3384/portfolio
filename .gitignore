@@ -44,3 +44,4 @@ Thumbs.db
 # Assets
 /assets
 /src/assets/images/pic/
+!/src/assets/images/pic/frontend-monitor-animated.svg
