@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img"
+    aria-label="Animated frontend development monitor illustration">
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#11151b" />
+            <stop offset="1" stop-color="#1a2028" />
+        </linearGradient>
+        <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0f1319" />
+            <stop offset="1" stop-color="#151c25" />
+        </linearGradient>
+        <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#009639" stop-opacity="0.32" />
+            <stop offset="1" stop-color="#E15544" stop-opacity="0.28" />
+        </linearGradient>
+        <linearGradient id="phoneScreen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#121821" />
+            <stop offset="1" stop-color="#0D1219" />
+        </linearGradient>
+        <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+            <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.35" />
+        </filter>
+        <style>
+            .float {
+                animation: floatY 5s ease-in-out infinite;
+                transform-origin: center;
+            }
+
+            .float2 {
+                animation: floatY 6.5s ease-in-out infinite;
+                transform-origin: center;
+            }
+
+            .blink {
+                animation: blink 1.1s steps(1, end) infinite;
+            }
+
+            .code-line {
+                transform-box: fill-box;
+                transform-origin: left center;
+                animation: typing 3.8s ease-in-out infinite;
+            }
+
+            .code-line.d2 {
+                animation-delay: .4s;
+            }
+
+            .code-line.d3 {
+                animation-delay: .8s;
+            }
+
+            .code-line.d4 {
+                animation-delay: 1.1s;
+            }
+
+            .code-line.d5 {
+                animation-delay: 1.4s;
+            }
+
+            .token {
+                animation: pulse 2.6s ease-in-out infinite;
+            }
+
+            .token.t2 {
+                animation-delay: .4s;
+            }
+
+            .token.t3 {
+                animation-delay: .8s;
+            }
+
+            .token.t4 {
+                animation-delay: 1.2s;
+            }
+
+            .token.t5 {
+                animation-delay: 1.6s;
+            }
+
+            .scan {
+                animation: sweep 4.4s ease-in-out infinite;
+            }
+
+            @keyframes floatY {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            @keyframes blink {
+
+                0%,
+                46% {
+                    opacity: 1;
+                }
+
+                47%,
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @keyframes typing {
+
+                0%,
+                12% {
+                    transform: scaleX(.02);
+                    opacity: .45;
+                }
+
+                28%,
+                74% {
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: scaleX(.78);
+                    opacity: .92;
+                }
+            }
+
+            @keyframes pulse {
+
+                0%,
+                100% {
+                    opacity: .55;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes sweep {
+
+                0%,
+                18% {
+                    transform: translateX(-120px);
+                    opacity: 0;
+                }
+
+                28%,
+                72% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateX(470px);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </defs>
+
+    <rect width="800" height="1000" rx="34" fill="url(#bg)" />
+
+    <g opacity="0.12" stroke="#FFFFFF">
+        <path d="M0 140h800" />
+        <path d="M0 280h800" />
+        <path d="M0 420h800" />
+        <path d="M0 560h800" />
+        <path d="M0 700h800" />
+        <path d="M0 840h800" />
+        <path d="M133 0v1000" />
+        <path d="M266 0v1000" />
+        <path d="M399 0v1000" />
+        <path d="M532 0v1000" />
+        <path d="M665 0v1000" />
+    </g>
+
+    <g class="float2" filter="url(#shadow)">
+        <rect x="96" y="110" width="220" height="88" rx="44" fill="#009639" />
+        <text x="145" y="165" fill="#ffffff" font-family="Roboto Mono, monospace" font-size="48"
+            font-weight="700">HTML</text>
+    </g>
+
+    <g class="float" filter="url(#shadow)">
+        <rect x="498" y="164" width="230" height="88" rx="44" fill="#E15544" />
+        <text x="555" y="218" fill="#ffffff" font-family="Roboto Mono, monospace" font-size="44"
+            font-weight="700">CSS</text>
+    </g>
+
+    <g class="float2" filter="url(#shadow)">
+        <rect x="292" y="206" width="160" height="72" rx="36" fill="#009639" />
+        <text x="339" y="253" fill="#ffffff" font-family="Roboto Mono, monospace" font-size="38"
+            font-weight="700">JS</text>
+    </g>
+
+    <g class="float2" filter="url(#shadow)">
+        <rect x="72" y="206" width="205" height="88" rx="44" fill="#2a3440" />
+        <text x="111" y="261" fill="#ffffff" font-family="Roboto Mono, monospace" font-size="44"
+            font-weight="700">TS</text>
+    </g>
+
+    <g class="float" filter="url(#shadow)">
+        <rect x="130" y="748" width="214" height="72" rx="36" fill="#2a3440" />
+        <text x="163" y="794" fill="#E15544" font-family="Roboto Mono, monospace" font-size="32"
+            font-weight="700">Angular</text>
+    </g>
+
+    <g class="float2" filter="url(#shadow)">
+        <rect x="530" y="748" width="202" height="72" rx="36" fill="#2a3440" />
+        <text x="566" y="794" fill="#009639" font-family="Roboto Mono, monospace" font-size="34"
+            font-weight="700">React</text>
+    </g>
+
+    <g filter="url(#shadow)">
+        <rect x="136" y="292" width="528" height="354" rx="26" fill="#0b0f14" stroke="#2d3743" stroke-width="4" />
+        <rect x="160" y="316" width="480" height="286" rx="16" fill="url(#screen)" />
+        <rect x="160" y="316" width="480" height="286" rx="16" fill="url(#glow)" opacity="0.45" />
+
+        <circle cx="188" cy="340" r="6" fill="#E15544" />
+        <circle cx="210" cy="340" r="6" fill="#009639" />
+        <circle cx="232" cy="340" r="6" fill="#64748b" />
+
+        <rect x="286" y="652" width="228" height="26" rx="12" fill="#2a3440" />
+        <rect x="356" y="678" width="88" height="28" rx="10" fill="#11151b" />
+    </g>
+
+    <g>
+        <rect class="code-line" x="194" y="380" width="280" height="12" rx="6" fill="#009639" />
+        <rect class="code-line d2" x="194" y="412" width="350" height="12" rx="6" fill="#8aa0b7" />
+        <rect class="code-line d3" x="194" y="444" width="240" height="12" rx="6" fill="#E15544" />
+        <rect class="code-line d4" x="194" y="476" width="320" height="12" rx="6" fill="#8aa0b7" />
+        <rect class="code-line d5" x="194" y="508" width="290" height="12" rx="6" fill="#009639" />
+
+        <rect class="blink" x="486" y="508" width="9" height="18" rx="2" fill="#E15544" />
+
+        <circle class="token" cx="548" cy="382" r="7" fill="#009639" />
+        <circle class="token t2" cx="570" cy="382" r="7" fill="#E15544" />
+        <circle class="token t3" cx="592" cy="382" r="7" fill="#009639" />
+        <circle class="token t4" cx="614" cy="382" r="7" fill="#E15544" />
+        <circle class="token t5" cx="636" cy="382" r="7" fill="#009639" />
+    </g>
+
+    <rect class="scan" x="168" y="348" width="130" height="238" rx="16" fill="#ffffff" opacity="0.07" />
+
+    <!-- Phone -->
+    <g class="float" filter="url(#shadow)">
+        <rect x="612" y="360" width="118" height="232" rx="26" fill="#0A0E13" />
+        <rect x="618" y="366" width="106" height="220" rx="22" fill="#1E2630" />
+        <rect x="624" y="376" width="94" height="196" rx="18" fill="url(#phoneScreen)" />
+
+        <rect x="652" y="378" width="40" height="8" rx="4" fill="#0A0E13" />
+        <circle cx="645" cy="382" r="3" fill="#2F3A46" />
+
+        <rect x="635" y="418" width="66" height="8" rx="4" fill="#009639" opacity="0.85" />
+        <rect x="635" y="438" width="50" height="8" rx="4" fill="#8AA0B7" opacity="0.85" />
+        <rect x="635" y="458" width="58" height="8" rx="4" fill="#E15544" opacity="0.85" />
+        <rect x="635" y="478" width="45" height="8" rx="4" fill="#8AA0B7" opacity="0.85" />
+
+        <circle cx="671" cy="548" r="4" fill="#2F3A46" />
+        <rect x="644" y="560" width="54" height="3" rx="1.5" fill="#2F3A46" />
+    </g>
+
+    <g class="float" filter="url(#shadow)">
+        <rect x="336" y="838" width="184" height="64" rx="14" fill="#2a3440" />
+        <text x="381" y="879" fill="#009639" font-family="Roboto Mono, monospace" font-size="30"
+            font-weight="700">&lt;/&gt;</text>
+    </g>
+</svg>
