@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
-import { StaggerChildrenDirective } from '../../shared/directives/stagger-children.directive';
 import { SplitLettersDirective } from '../../shared/directives/split-letters.directive';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -13,5 +12,4 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
 }

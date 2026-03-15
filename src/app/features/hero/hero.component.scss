@@ -14,12 +14,77 @@
   align-self: end;
 }
 
+.hero__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.hero__image::after {
+  content: '';
+  position: absolute;
+  inset: -20% -35%;
+  background: linear-gradient(115deg,
+      rgba(0, 150, 57, 0) 35%,
+      rgba(0, 150, 57, 0.18) 50%,
+      rgba(225, 85, 68, 0.14) 62%,
+      rgba(225, 85, 68, 0) 75%);
+  transform: translateX(-70%);
+  animation: hero-sweep 5.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
 .hero__image img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 16px;
   object-fit: cover;
+}
+
+.hero__image-animated {
+  animation: hero-float 4.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.hero__image .hero__image-desktop {
+  display: block;
+}
+
+.hero__image .hero__image-mobile {
+  display: none;
+}
+
+@keyframes hero-float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.01);
+  }
+}
+
+@keyframes hero-sweep {
+
+  0%,
+  18% {
+    transform: translateX(-70%);
+    opacity: 0;
+  }
+
+  27%,
+  64% {
+    opacity: 1;
+  }
+
+  85%,
+  100% {
+    transform: translateX(78%);
+    opacity: 0;
+  }
 }
 
 .hero {
@@ -44,6 +109,18 @@
     width: 100%;
     max-width: min(520px, 92vw);
     margin-inline: auto;
+    border-radius: 18px;
+
+    &.reveal-scale-start,
+    &.reveal-scale-in {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .hero__image img {
@@ -53,6 +130,19 @@
     border-radius: 18px;
     object-fit: cover;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .hero__image .hero__image-desktop {
+    display: none !important;
+  }
+
+  .hero__image .hero__image-mobile {
+    display: block;
+    animation: none !important;
+  }
+
+  .hero__image-animated {
+    animation: none !important;
   }
 
   .hero__text {
@@ -84,6 +174,14 @@
   .hero__image img {
     border-radius: 16px;
     box-shadow: none;
+  }
+
+  .hero__image .hero__image-desktop {
+    display: block;
+  }
+
+  .hero__image .hero__image-mobile {
+    display: none;
   }
 }
 
